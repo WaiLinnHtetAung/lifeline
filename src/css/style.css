@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-color: #33C5FA;
+    --sec-color: #FF8C00;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+
+/* ----------section header --------- */
+
+.header-container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container .title {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--main-color);
+}
+
+.header-container .all {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-container .all i {
+    color: var(--main-color);
+    transform: rotate(35deg);
+}
+
+.header-container .underline {
+    border-bottom: 3px solid var(--sec-color);
+    margin-top: 10px;
+}

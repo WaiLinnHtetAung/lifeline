@@ -45,33 +45,33 @@
                 },
                 {
                     id: 1, 
-                    src: require('@/assets/images/category/cat5.jpeg'),
+                    src: require('@/assets/images/category/cat5.jpg'),
                     title: "Antiangina"
                 },
                 {
                     id: 1, 
-                    src: require('@/assets/images/category/cat10.webp'),
-                    title: "Antipsychotic"
+                    src: require('@/assets/images/category/cat6.jpg'),
+                    title: "Antianxiety Drug"
                 },
                 {
                     id: 1, 
-                    src: require('@/assets/images/category/cat6.png'),
-                    title: "Topical Cream"
+                    src: require('@/assets/images/category/cat7.webp'),
+                    title: "Antibiotic"
                 },
                 {
                     id: 1, 
-                    src: require('@/assets/images/category/cat7.jpg'),
-                    title: "Topical Cream"
+                    src: require('@/assets/images/category/cat8.jpg'),
+                    title: "Antifibrinolytic"
                 },
                 {
                     id: 1, 
-                    src: require('@/assets/images/category/cat8.jpeg'),
-                    title: "Topical Cream"
+                    src: require('@/assets/images/category/cat9.webp'),
+                    title: "Antihypertensive "
                 },
                 {
                     id: 1, 
-                    src: require('@/assets/images/category/cat9.jpg'),
-                    title: "Topical Cream"
+                    src: require('@/assets/images/category/cat10.jpg'),
+                    title: "Antipsychotic "
                 },
             ];
 
@@ -105,7 +105,7 @@
         width: 150px;
         height: 150px;
         border-radius: 100%;
-        object-fit: cover;
+        object-fit: inherit;
     }
 
     .categories .category-item div {

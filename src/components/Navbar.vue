@@ -1,34 +1,9 @@
 <template>
     <nav class="nav1">
-        <div class="navbar-brand">
-            <img src="@/assets/images/ll.png" alt="">
-            <div>
-                <h2>LIFELINE </h2>
-                <h3>GROUP OF COMPANIES</h3>
-            </div>
-        </div>
-        <div class="navbar-contact">
-            <div class="first-contact">
-                <div class="mail">
-                    <i class="fa-solid fa-envelope-open"></i>
-                    <div class="info-text">inquiry@lifelinemyanmar.com</div>
-                </div>
-                <div class="phone">
-                    <i class="fa-solid fa-phone-volume"></i>
-                    <div class="info-text">09 977 195 890</div>
-                </div>
-            </div>
-            <div class="second-contact">
-                <div class="fb">
-                    <i class="fa-brands fa-square-facebook"></i>
-                    <div class="info-text text-decoration-underline pointer">https://www.facebook.com/<br>lifelinemyanmar</div>
-                </div>
-                <div class="viber">
-                    <i class="fa-brands fa-viber"></i>
-                    <div class="info-text">09 977 195 890</div>
-                </div>
-            </div>
-        </div>
+        <img src="@/assets/images/ll.png" alt="">
+        <h2>
+            LIFELINE GROUP OF COMPANIES
+        </h2>
     </nav>
 
     <nav class="nav2">
@@ -71,7 +46,7 @@
                             <router-link to="#">Promotions</router-link>
                         </div>
                     </router-link>
-                    <router-link to="#">Services</router-link>
+                    <router-link to="#">Services & Promotions</router-link>
                 </div>
             </div>
             <div class="menu">
@@ -110,66 +85,20 @@
 
 <style scoped>
     .nav1 {
-        padding: 25px 15%;
+        padding: 10px 15%;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .navbar-brand {
-        display: flex;
-        align-items: center;
-    }
-
-    .nav1 img {
-        width: 20%;
-    }
-    .navbar-brand h2 {
-        font-weight: bold;
-        letter-spacing: 9px;
-        color: var(--main-color);
-    }
-
-    .navbar-brand h3 {
-        font-size: 18px;
-    }
-
-    .navbar-contact {
-        display: flex;
-        gap: 50px;
-    }
-
-    .navbar-contact .info-text {
-        font-size: 13px;
-    }
-
-    .first-contact, .second-contact {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .first-contact {
-        gap: 40px;
-    }
-
-    .first-contact .mail, .first-contact .phone, .second-contact .fb, .second-contact .viber {
-        display: flex;
-        justify-content: start;
         align-items: center;
         gap: 15px;
+        background: #fff !important;
     }
-
-    .navbar-contact i {
-        font-size: 20px;
+    .nav1 img {
+        width: 10%;
     }
-
-    .fa-square-facebook {
-        color: #3b5998;
-    }
-
-    .fa-viber {
-        color: #8f5db7;
+    
+    .nav1 h2 {
+        font-weight: bold;
+        padding-top: 7px;
+        color: var(--main-color);
     }
 
 
@@ -180,7 +109,9 @@
         justify-content: space-between;
         background-color: var(--main-color);
         height: 35px;
-        
+        position: sticky;
+        top: 0;
+        z-index: 9999;
     }
 
     .nav2 .menu-items {

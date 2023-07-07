@@ -13,9 +13,7 @@
                 <div class="col-lg-3 col-md-6 text-center mb-5 all-products"  v-for="(product, index) in products" :key="index">
                     <img :src="product.src" alt="">
                     <div class="product-text text-center mt-3">
-                        <span class="badge rounded-pill">ingredient</span>
-                        <span class="badge rounded-pill">ingredient</span>
-                        <span class="badge rounded-pill">ingredient</span>
+                        <span class="badge rounded-pill" v-for="(ing, index) in product.ingredients" :key="index">{{ing}}</span>
 
                         <h2>{{product.title}}</h2>
                         <p>{{product.description}}</p>
@@ -37,50 +35,59 @@
             let products = [
                 {
                     id: 1, 
-                    title: "XTRACAL HD",
-                    src: require("@/assets/images/product1.jpg"),
+                    title: "Bherumn-S",
+                    src: require("@/assets/images/Principlewise/Bherumn-S.png"),
+                    ingredients: ['Cefoperazone 1g', 'Sulbactam 0.5g'],
                     description: "Ketoconazole topical (for the skin) (Brand Names: Extina, Kuric, Nizoral A-D, Nizoral Topical, Xolegel) is an antifungal medication used to treat fungal infections of the skin such as athlete's foot.",
                 },
                 {
                     id: 1, 
-                    title: "CALYZID",
-                    src: require("@/assets/images/product2.jpg"),
+                    title: "CFM-(Inj)",
+                    src: require("@/assets/images/Principlewise/CFM-(Inj).png"),
+                    ingredients: ['Cefepime 1g', 'Sterile water for injection 10ml'],
                     description: "Ketoconazole topical (for the skin) (Brand Names: Extina, Kuric, Nizoral A-D, Nizoral Topical, Xolegel) is an antifungal medication used to treat fungal infections of the skin such as athlete's foot.",
                 },
                 {
                     id: 1, 
-                    title: "ARTHOCERIN",
-                    src: require("@/assets/images/product3.jpg"),
+                    title: "Beniclav-625",
+                    src: require("@/assets/images/Principlewise/Beniclav-625.png"),
+                    ingredients: ['Amoxicillin', 'Potassium clavulanate'],
                     description: "Ketoconazole topical (for the skin) (Brand Names: Extina, Kuric, Nizoral A-D, Nizoral Topical, Xolegel) is an antifungal medication used to treat fungal infections of the skin such as athlete's foot.",
                 },
                 {
                     id: 1, 
-                    title: "AMINOVIT",
-                    src: require("@/assets/images/product4.png"),
+                    title: "Benixim-200",
+                    src: require("@/assets/images/Principlewise/Benixim-200.png"),
+                    ingredients: ['cefixime 50mg/ml'],
                     description: "Ketoconazole topical (for the skin) (Brand Names: Extina, Kuric, Nizoral A-D, Nizoral Topical, Xolegel) is an antifungal medication used to treat fungal infections of the skin such as athlete's foot.",
                 },
                 {
                     id: 1, 
-                    title: "AMINOVIT",
-                    src: require("@/assets/images/products/product1.jpg"),
+                    title: "Benixim-100",
+                    src: require("@/assets/images/Principlewise/Benixim-100.png"),
+                    ingredients: ['cefexime 100 mg'],
+                    description: "Ketoconazole topical (for the skin) (Brand Names: Extina, Kuric, Nizoral A-D, Nizoral Topical, Xolegel) is an antifungal medication used to treat fungal infections of the skin such as athlete's foot.",
+                },
+                
+                {
+                    id: 1, 
+                    title: "Pepcare D",
+                    src: require("@/assets/images/Principlewise/Pepcare-D.png"),
+                    ingredients: ['Pantoprazole 40mg', 'domperidone 10mg'],
                     description: "Ketoconazole topical (for the skin) (Brand Names: Extina, Kuric, Nizoral A-D, Nizoral Topical, Xolegel) is an antifungal medication used to treat fungal infections of the skin such as athlete's foot.",
                 },
                 {
                     id: 1, 
-                    title: "AMINOVIT",
-                    src: require("@/assets/images/products/product2.jpg"),
+                    title: "Pepcare SR",
+                    src: require("@/assets/images/Principlewise/Pepcare-SR.png"),
+                    ingredients: ['Pantoprazole 40mg', 'Domperidone 30mg'],
                     description: "Ketoconazole topical (for the skin) (Brand Names: Extina, Kuric, Nizoral A-D, Nizoral Topical, Xolegel) is an antifungal medication used to treat fungal infections of the skin such as athlete's foot.",
                 },
                 {
                     id: 1, 
-                    title: "AMINOVIT",
-                    src: require("@/assets/images/products/product3.webp"),
-                    description: "Ketoconazole topical (for the skin) (Brand Names: Extina, Kuric, Nizoral A-D, Nizoral Topical, Xolegel) is an antifungal medication used to treat fungal infections of the skin such as athlete's foot.",
-                },
-                {
-                    id: 1, 
-                    title: "AMINOVIT",
-                    src: require("@/assets/images/products/product4.png"),
+                    title: "Rosevast",
+                    src: require("@/assets/images/Principlewise/Rosevast-10.png"),
+                    ingredients: ['Rosuvastatin 10mg'],
                     description: "Ketoconazole topical (for the skin) (Brand Names: Extina, Kuric, Nizoral A-D, Nizoral Topical, Xolegel) is an antifungal medication used to treat fungal infections of the skin such as athlete's foot.",
                 },
             ];
@@ -96,9 +103,9 @@
     }
 
     .products img {
-        width: 70%;
+        width: 100%;
         height: 200px;
-        object-fit: cover;
+        object-fit: contain;
     }
 
     .products .badge {

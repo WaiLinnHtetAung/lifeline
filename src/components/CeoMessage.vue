@@ -28,7 +28,7 @@
         padding: 10px 15%;
         background-image: linear-gradient(to right, rgb(86,192,226, .8), rgba(255, 187, 0, 0.5));
         height: 300px;
-        margin: 40px auto 80px;
+        margin: 140px auto 50px;
     }
 
     .ceo-message .ceo {

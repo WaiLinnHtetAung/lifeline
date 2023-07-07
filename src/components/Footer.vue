@@ -1,25 +1,27 @@
 <template>
     <div class="footer">
         <div class="logo">
-            <h2>
-                Lifeline Group of <br> <span>Companies</span>
-            </h2>
+            
             <div class="logo-img">
-                <img src="@/assets/images/ll.png" alt="">
-                <img src="@/assets/images/mbd.png" alt="">
-                <img src="@/assets/images/loyan-lifeline.png" alt="">
-                <img src="@/assets/images/lifecare.png" alt="">
+                <img class="lifeline" src="@/assets/images/ll.png" alt="">
+                <img class="mbd" src="@/assets/images/mbd.png" alt="">
+                <img class="loyallifeline" src="@/assets/images/loyan-lifeline.png" alt="">
+                <img class="lifecare" src="@/assets/images/lifecare.png" alt="">
             </div>
+
+            <h2>
+                LIFELINE GROUP OF COMPANIES
+            </h2>
         </div>
         <div class="row location ">
             <div class="col-lg-7">
                 <div class="row mt-5">
-                    <div class="col-lg-6">
+                    <div class="col-lg-5 ">
                         <div class="row mb-3">
                             <div class="col-lg-1 ">
                                 <i class="fa-solid fa-location-dot"></i>
                             </div>
-                            <div class="col-lg-9">
+                            <div class="col-lg-9 ms-3">
                                 No.238, Testing St, Testing  Township, Yangon
                             </div>
                         </div>
@@ -27,7 +29,7 @@
                             <div class="col-lg-1 ">
                                 <i class="fa-solid fa-phone-volume"></i>
                             </div>
-                            <div class="col-lg-9">
+                            <div class="col-lg-9 ms-3">
                                 +959 - 2343423442 <br>
                                 +959 - 4432325902
                             </div>
@@ -36,20 +38,38 @@
                             <div class="col-lg-1 ">
                                 <i class="fa-solid fa-envelope"></i>
                             </div>
-                            <div class="col-lg-9">
+                            <div class="col-lg-9 ms-3">
                                 inquiry@lifelinemyanmar.com
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 lifeline-link">
-                        <h2>About Lifeline</h2>
-                        <ul>
-                            <li>CEO Message</li>
-                            <li>Vision & Mission</li>
-                            <li>Company MileStone (Timeline)</li>
-                            <li>CSR Activity</li>
-                            <li>News & Events</li>
-                        </ul>
+                    <div class="col-lg-7  lifeline-link">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h2>About Lifeline</h2>
+                                <ul>
+                                    <li>Introduction</li>
+                                    <li>CEO Message</li>
+                                    <li>Vision & Mission</li>
+                                    <li>Company MileStone (Timeline)</li>
+                                    <li>CSR Activity</li>
+                                    <li>News & Events</li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <h2>&nbsp;</h2>
+                                <ul>
+                                    <li>Categories</li>
+                                    <li>Our Porducts</li>
+                                    <li>Product Promotions</li>
+                                    <li>Services & Promotions</li>
+                                    <li>Principle Partners</li>
+                                    <li>Hospital Partners</li>
+                                    <li>Contact</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -81,34 +101,51 @@
 
 <style scoped>
     .footer {
-        padding: 90px 9% 10px;
-        background-image: linear-gradient(to bottom, rgb(91, 196, 235), rgb(254,138,37, .6));
+        padding: 30px 9% 10px;
+        background-image: linear-gradient(to bottom, rgb(91, 196, 235), rgba(145, 121, 13, 0.6));
     }
 
     .footer .logo {
         display: flex;
-        align-items: center;
-        gap: 90px;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
     }
 
     .footer .logo h2 {
         font-weight: bold;
-        font-size: 34px;
-        color: #fff;
+        font-size: 30px;
+        color: rgb(255, 255, 255);
+        padding-top: 5px;
+        letter-spacing: 2px;
     }
-    .footer .logo h2 span {
-        letter-spacing: 10px;
-    }
-
     .footer .logo img {
-        width: 150px;
-        height: auto;
-        object-fit: cover;
+        object-fit: contain;
         margin-right: 40px;
     }
 
+    .footer .lifeline {
+        width: 110px;
+        height: 100px;
+    }
+
+    .footer .mbd {
+        width: 150px;
+        height: 100px;
+        object-fit: fill !important;
+    }
+
+    .footer .loyallifeline {
+        width: 130px;
+        height: 100px;
+    }
+
+    .footer .lifecare {
+        width: 110px;
+        height: 100px;
+    }
     .location {
-        margin-top: 50px;
+        margin-top: 10px;
     }
 
     .location i {
@@ -134,6 +171,6 @@
 
     .social i {
         font-size: 48px;
-        margin: 10px 30px;
+        margin: 5px 30px;
     }
 </style>

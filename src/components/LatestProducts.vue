@@ -11,23 +11,18 @@
         </div>
 
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
-            </div>
+            
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="d-block w-100">
                     <div class="row">
                         <div class="col-3">
-                            <img src="@/assets/images/products/product1.jpg" alt="">
+                            <img src="@/assets/images/Principlewise/Bherumn-S.png" alt="">
                             <div class="product-text text-center mt-3">
-                                <span class="badge rounded-pill">ingredient</span>
-                                <span class="badge rounded-pill">ingredient</span>
-                                <span class="badge rounded-pill">ingredient</span>
+                                <span class="badge rounded-pill">Cefoperazone 1g</span>
+                                <span class="badge rounded-pill">Sulbactam 0.5g</span>
 
-                                <h2>KETOZ</h2>
+                                <h2>Bherumn-S</h2>
                                 <p>Lorem ipsum, dolor repellendus error placeat reprehenderit alias fuga mollitia repellat!</p>
                                 <div class="btn-group">
                                     <button class="btn btn-outline-primary">All Products</button>
@@ -36,13 +31,12 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <img src="@/assets/images/products/product2.jpg" alt="">
+                            <img src="@/assets/images/Principlewise/CFM-(Inj).png" alt="">
                             <div class="product-text text-center mt-3">
-                                <span class="badge rounded-pill">ingredient</span>
-                                <span class="badge rounded-pill">ingredient</span>
-                                <span class="badge rounded-pill">ingredient</span>
+                                <span class="badge rounded-pill">Cefepime 1g</span>
+                                <span class="badge rounded-pill">Sterile water for injection 10ml</span>
 
-                                <h2>KETOZ</h2>
+                                <h2>CFM-(Inj)</h2>
                                 <p>Lorem ipsum, dolor repellendus error placeat reprehenderit alias fuga mollitia repellat!</p>
                                 <div class="btn-group">
                                     <button class="btn btn-outline-primary">All Products</button>
@@ -51,13 +45,12 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <img src="@/assets/images/products/product3.webp" alt="">
+                            <img src="@/assets/images/Principlewise/Beniclav-625.png" alt="">
                             <div class="product-text text-center mt-3">
-                                <span class="badge rounded-pill">ingredient</span>
-                                <span class="badge rounded-pill">ingredient</span>
-                                <span class="badge rounded-pill">ingredient</span>
+                                <span class="badge rounded-pill">Amoxicillin</span>
+                                <span class="badge rounded-pill">Potassium clavulanate</span>
 
-                                <h2>KETOZ</h2>
+                                <h2>Beniclav-625</h2>
                                 <p>Lorem ipsum, dolor repellendus error placeat reprehenderit alias fuga mollitia repellat!</p>
                                 <div class="btn-group">
                                     <button class="btn btn-outline-primary">All Products</button>
@@ -66,13 +59,11 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <img src="@/assets/images/products/product4.png" alt="">
+                            <img src="@/assets/images/Principlewise/Benixim-200.png" alt="">
                             <div class="product-text text-center mt-3">
-                                <span class="badge rounded-pill">ingredient</span>
-                                <span class="badge rounded-pill">ingredient</span>
-                                <span class="badge rounded-pill">ingredient</span>
+                                <span class="badge rounded-pill">cefixime 50mg/ml</span>
 
-                                <h2>KETOZ</h2>
+                                <h2>Benixim-100</h2>
                                 <p>Lorem ipsum, dolor repellendus error placeat reprehenderit alias fuga mollitia repellat!</p>
                                 <div class="btn-group">
                                     <button class="btn btn-outline-primary">All Products</button>
@@ -87,13 +78,12 @@
                 <div class="d-block w-100">
                     <div class="row">
                         <div class="col-3">
-                            <img src="@/assets/images/products/product1.jpg" alt="">
+                            <img src="@/assets/images/Principlewise/Bherumn-S.png" alt="">
                             <div class="product-text text-center mt-3">
-                                <span class="badge rounded-pill">ingredient</span>
-                                <span class="badge rounded-pill">ingredient</span>
-                                <span class="badge rounded-pill">ingredient</span>
+                                <span class="badge rounded-pill">Cefoperazone 1g</span>
+                                <span class="badge rounded-pill">Sulbactam 0.5g</span>
 
-                                <h2>New Item</h2>
+                                <h2>Bherumn-S</h2>
                                 <p>Lorem ipsum, dolor repellendus error placeat reprehenderit alias fuga mollitia repellat!</p>
                                 <div class="btn-group">
                                     <button class="btn btn-outline-primary">All Products</button>
@@ -102,13 +92,12 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <img src="@/assets/images/products/product2.jpg" alt="">
+                            <img src="@/assets/images/Principlewise/CFM-(Inj).png" alt="">
                             <div class="product-text text-center mt-3">
-                                <span class="badge rounded-pill">ingredient</span>
-                                <span class="badge rounded-pill">ingredient</span>
-                                <span class="badge rounded-pill">ingredient</span>
+                                <span class="badge rounded-pill">Cefepime 1g</span>
+                                <span class="badge rounded-pill">Sterile water for injection 10ml</span>
 
-                                <h2>KETOZ</h2>
+                                <h2>CFM-(Inj)</h2>
                                 <p>Lorem ipsum, dolor repellendus error placeat reprehenderit alias fuga mollitia repellat!</p>
                                 <div class="btn-group">
                                     <button class="btn btn-outline-primary">All Products</button>
@@ -117,13 +106,12 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <img src="@/assets/images/products/product3.webp" alt="">
+                            <img src="@/assets/images/Principlewise/Beniclav-625.png" alt="">
                             <div class="product-text text-center mt-3">
-                                <span class="badge rounded-pill">ingredient</span>
-                                <span class="badge rounded-pill">ingredient</span>
-                                <span class="badge rounded-pill">ingredient</span>
+                                <span class="badge rounded-pill">Amoxicillin</span>
+                                <span class="badge rounded-pill">Potassium clavulanate</span>
 
-                                <h2>KETOZ</h2>
+                                <h2>Beniclav-625</h2>
                                 <p>Lorem ipsum, dolor repellendus error placeat reprehenderit alias fuga mollitia repellat!</p>
                                 <div class="btn-group">
                                     <button class="btn btn-outline-primary">All Products</button>
@@ -132,13 +120,11 @@
                             </div>
                         </div>
                         <div class="col-3">
-                            <img src="@/assets/images/products/product4.png" alt="">
+                            <img src="@/assets/images/Principlewise/Benixim-200.png" alt="">
                             <div class="product-text text-center mt-3">
-                                <span class="badge rounded-pill">ingredient</span>
-                                <span class="badge rounded-pill">ingredient</span>
-                                <span class="badge rounded-pill">ingredient</span>
+                                <span class="badge rounded-pill">cefixime 50mg/ml</span>
 
-                                <h2>KETOZ</h2>
+                                <h2>Benixim-100</h2>
                                 <p>Lorem ipsum, dolor repellendus error placeat reprehenderit alias fuga mollitia repellat!</p>
                                 <div class="btn-group">
                                     <button class="btn btn-outline-primary">All Products</button>
@@ -176,7 +162,7 @@
     .carousel-item img {
         width: 100%;
         height: 200px;
-        object-fit: cover;
+        object-fit:contain;
     }
 
     .carousel-item .badge {

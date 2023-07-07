@@ -1,14 +1,14 @@
 <template>
   <div class="home">
     <Carousel></Carousel>
-    <OurBusiness></OurBusiness>
     <CeoMessage></CeoMessage>
-    <Category></Category>
+    <OurBusiness></OurBusiness>
+    <!-- <Category></Category>
     <Promotion></Promotion>
     <LatestProducts></LatestProducts>
     <OurProducts></OurProducts>
     <CompanyInfo></CompanyInfo>
-    <News></News>
+    <News></News> -->
   </div>
 </template>
 

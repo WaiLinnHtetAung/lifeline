@@ -1,9 +1,10 @@
 <template>
   <div class="home">
     <Carousel></Carousel>
-    <CeoMessage></CeoMessage>
+    <Welcome></Welcome>
     <OurBusiness></OurBusiness>
     <!-- <Category></Category>
+    <CeoMessage></CeoMessage>
     <Promotion></Promotion>
     <LatestProducts></LatestProducts>
     <OurProducts></OurProducts>
@@ -13,6 +14,7 @@
 </template>
 
 <script>
+import Welcome from '../components/Welcome'
 import News from '../components/News'
 import CompanyInfo from '../components/CompanyInfo'
 import OurProducts from '../components/OurProducts'
@@ -26,6 +28,7 @@ import Carousel from '../components/Carousel'
 
 export default {
   components: {
+    Welcome,
     News,
     CompanyInfo,
     OurProducts,

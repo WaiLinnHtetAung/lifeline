@@ -102,7 +102,7 @@
 <style scoped>
     .footer {
         padding: 30px 9% 10px;
-        background-image: linear-gradient(to bottom, rgb(91, 196, 235), rgba(145, 121, 13, 0.6));
+        background-image: linear-gradient(to bottom, rgb(91, 196, 235), rgba(62, 188, 192, 0.5));
     }
 
     .footer .logo {

@@ -1,130 +1,252 @@
 <template>
     <div class="our-business">
-        <div class="section-header">
-            <div>Business Provided for You</div>
-            <h2>OUR BUSINESS</h2>
-        </div>
-
-        <div class="business">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-3 p-1">
-                    <div class="business-card">
-                        <img class="lifeline" src="@/assets/images/ll.png" alt="">
-                        <h2>Lifeline</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum natus nisi commodi ut optio obcaecati eius modi! Officiis, laudantium in. Lorem ipsum dolor, sit amet consectetur a</p>
-                        <button class="btn btn-warning">See More</button>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-3 p-1">
-                    <div class="business-card">
-                        <img class="mbd" src="@/assets/images/mbd.png"  alt="">
-                        <h2 class="mbd">Myanmar Booster Destribution</h2>
-                        <p>Lorem, ipsum dolor sit ametnisi commodi ut optio obcaecati eius modi! Officiis, laudantium in. Lorem ipsum dolor, sit amet consectetur a</p>
-                        <button class="btn btn-warning">See More</button>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-3 p-1">
-                    <div class="business-card">
-                        <img class="loyallifeline" src="@/assets/images/loyan-lifeline.png" alt="">
-                        <h2>Loyal Lifeline</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum natus nisi commodi ut optio obcaecati eius modi! Officiis, laudantium in. Lorem ipsum dolor, sit amet consectetur a</p>
-                        <button class="btn btn-warning">See More</button>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-3 p-1">
-                    <div class="business-card">
-                        <img class="lifecare" src="@/assets/images/lifecare.png" alt="">
-                        <h2>Lifecare Medical Servies</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum natus nisi commodi ut optio obcaecati eius modi! Officiis, laudantium in. Lorem ipsum dolor, sit amet consectetur a</p>
-                        <button class="btn btn-warning">See More</button>
-                    </div>
-                </div>
+        <v-card>
+            <v-toolbar
+              color="#039BE5"
+            >
+              <v-toolbar-title style="color: #fff; font-weight:bolder; font-size: 24px;">Our Business</v-toolbar-title>
+            </v-toolbar>
+            <div class="d-flex flex-row">
+              <v-tabs
+                v-model="tab"
+                direction="vertical"
+                color="#FF8C00"
+                class="tab-title"
+              >
+                <v-tab value="option-1" class="single-tab">
+                  <v-icon start style="margin-left: 10px;">
+                    mdi-bag-personal
+                  </v-icon>
+                  Our Business
+                </v-tab>
+                <v-tab value="option-2" class="single-tab">
+                  <v-icon start style="margin-left: 10px;">
+                    <img :src="require('@/assets/images/llbg.png')" alt="">
+                  </v-icon>
+                    Lifeline
+                </v-tab>
+                <v-tab value="option-3" class="single-tab">
+                  <v-icon start style="margin-left: 10px;">
+                    <img :src="require('@/assets/images/mbdbg.png')" alt="">
+                  </v-icon>
+                  Myanmar Booster Distribution
+                </v-tab>
+                <v-tab value="option-4" class="single-tab">
+                    <v-icon start style="margin-left: 10px;">
+                      <img :src="require('@/assets/images/loyan-lifelinebg.png')" alt="">
+                    </v-icon>
+                    Loyal Lifeline
+                  </v-tab>
+                  <v-tab value="option-5" class="single-tab">
+                    <v-icon start style="margin-left: 10px;">
+                      <img :src="require('@/assets/images/lifecarebg.png')" alt="">
+                    </v-icon>
+                    Lifecare
+                  </v-tab>
+                </v-tabs>
+              
+                <v-window v-model="tab" class="tab-content-container" style="border-left: 1px solid var(--sec-color);">
+                    <v-window-item value="option-1">
+                    <v-card flat>
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="content">
+                                        <img :src="require('@/assets/images/ll.png')" alt="">
+                                        <router-link to="#">Lifeline</router-link>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="content">
+                                        <img class="mbd-img" :src="require('@/assets/images/mbd.png')" alt="">
+                                        <router-link to="#">MBD</router-link>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="content">
+                                        <img :src="require('@/assets/images/loyan-lifeline.png')" alt="">
+                                        <router-link to="#">Loyal Lifeline</router-link>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="content">
+                                        <img :src="require('@/assets/images/lifecare.png')" alt="">
+                                        <router-link to="#">Lifecare</router-link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination" id="swiper-paginate"></div>
+                    </v-card>
+                    </v-window-item>
+                    <v-window-item value="option-2">
+                    <v-card flat>
+                        <v-card-text class="m-3">
+                            <img class="float-start float-img m-2" :src="require('@/assets/images/ll.png')" alt="">   
+                            <h2>Lifeline</h2>
+                            <p class="mb-0">
+                                Donec venenatis vulputate lorem. Aenean viverra rhoncus pede. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit minima facere expedita molestias assumenda doloribus, cumque ipsum adipisci praesentium, tempora aliquid suscipit autem, nostrum dolore quam eius commodi? Facere, sed veniam! Repellendus quaerat, tempore dolorem culpa, laudantium dignissimos quas sed, natus facere aperiam tenetur similique eum deleniti cumque? Porro, similique. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. Fusce commodo aliquam arcu. Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi.
+                            </p>
+                        </v-card-text>
+                    </v-card>
+                    </v-window-item>
+                    <v-window-item value="option-3">
+                    <v-card flat>
+                        <v-card-text class="m-3">
+                            <img class="float-start float-img m-2" :src="require('@/assets/images/mbd.png')" alt="">   
+                            <h2>Myanmar Booster Distribution</h2>
+                            <p class="mb-0">
+                                Donec venenatis vulputate lorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione maxime minima blanditiis saepe reprehenderit quo corrupti praesentium, natus vel molestiae. Aenean viverra rhoncus pede. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit minima facere expedita molestias assumenda doloribus, cumque ipsum adipisci praesentium, tempora aliquid suscipit autem, nostrum dolore quam eius commodi? Facere, sed veniam! Repellendus quaerat, tempore dolorem culpa, laudantium dignissimos quas sed, natus facere aperiam tenetur similique eum deleniti cumque? Porro, similique. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. Fusce commodo aliquam arcu. Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi.
+                            </p>
+                        </v-card-text>
+                    </v-card>
+                    </v-window-item>
+                    <v-window-item value="option-4">
+                        <v-card flat>
+                            <v-card-text class="m-3">
+                                <img class="float-start float-img m-2" :src="require('@/assets/images/loyan-lifeline.png')" alt="">   
+                                <h2>Loyal Lifeline</h2>
+                                <p class="mb-0">
+                                    Donec venenatis vulputate lorem. Aenean viverra rhoncus pede. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit minima facere expedita molestias assumenda doloribus, cumque ipsum adipisci praesentium, tempora aliquid suscipit autem, nostrum dolore quam eius commodi? Facere, sed veniam! Repellendus quaerat, tempore dolorem culpa, laudantium dignissimos quas sed, natus facere aperiam tenetur similique eum deleniti cumque? Porro, similique. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. Fusce commodo aliquam arcu. Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi.
+                                </p>
+                            </v-card-text>
+                        </v-card>
+                    </v-window-item>
+                    <v-window-item value="option-5">
+                        <v-card flat>
+                            <v-card-text class="m-3">
+                                <img class="float-start float-img m-2" :src="require('@/assets/images/lifecare.png')" alt="">   
+                                <h2>Lifecare</h2>
+                                <p class="mb-0">
+                                    Donec venenatis vulputate lorem. Aenean viverra rhoncus pede. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit minima facere expedita molestias assumenda doloribus, cumque ipsum adipisci praesentium, tempora aliquid suscipit autem, nostrum dolore quam eius commodi? Facere, sed veniam! Repellendus quaerat, tempore dolorem culpa, laudantium dignissimos quas sed, natus facere aperiam tenetur similique eum deleniti cumque? Porro, similique. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. Fusce commodo aliquam arcu. Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi.
+                                </p>
+                            </v-card-text>
+                        </v-card>
+                    </v-window-item>
+                </v-window>
             </div>
-        </div>
+        </v-card>
     </div>
 </template>
 
 <script>
+import { onMounted, ref } from 'vue'
     export default {
-        
+        setup() {
+            const tab = ref('option-1');
+            const swiper = ref(null);
+
+            onMounted(() => {
+                swiper.value = new Swiper('.swiper', {
+                    speed: 800,
+                    loop: true,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                        type: 'bullets',
+                    },
+                    slidesPerView: 2,
+                }) 
+            })
+
+            return {tab}
+        }
     }
 </script>
 
 <style scoped>
     .our-business {
-        padding: 95px 15%;
+        padding: 40px 15%;
     }
-    .section-header {
-        text-align: center;
-        padding-bottom: 30px;
-    }
-
-    .section-header>div {
-        color: var(--sec-color);
+    .swiper .swiper-wrapper {
+        height: 320px;
+        margin-bottom: 15px;
     }
 
-    .section-header h2 {
-        color: #fff;
-        font-weight: bold;
+    .swiper .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .business-card {
+    .swiper-slide .content {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-        background-image: linear-gradient(to bottom, rgb(31, 202, 214,.8), rgb(168, 122, 41));
-        padding: 40px 5px;
-        gap: 20px;
-        height: 450px;
-        border-radius: 5px;
-        text-align: center;
+        background: #fdf5e8;
+        height: 250px;
+        margin: 10px 30px;
         position: relative;
-        transition: .3s ease;
     }
 
-    .business-card:hover {
-        background: #40a4ac;
+    .swiper .swiper-wrapper img {
+        width: 60%;
+        margin-bottom: 30px;
     }
 
-    .business-card:hover h2 {
+    .swiper .swiper-wrapper .mbd-img {
+        width: 100%;
+    }
+
+    .swiper .swiper-slide a {
+        text-decoration: none;
+        background: #039BE5;
         color: #fff;
-    }
-
-    .business img {
-        height: 100px;
-        padding-bottom: 10px;
-        object-fit: contain;
-    }
-
-    .business .lifeline {
-        width: 150px;
-    }
-
-    .business .mbd {
-        height:180px;
-        margin-top: -40px;
-    }
-
-    .business .loyallifeline {
-        height: 120px;
-        margin-top: -20px;
-    }
-
-    .business-card h2 {
-        color: var(--main-color);
-        font-size: 24px;
-        font-weight: bold;
-    }
-
-    .business-card p {
+        padding: 5px 20px;
+        border-radius: 7px;
         position: absolute;
-        bottom: 16%;
-        color: #e2dede;
-        padding: 0 15px;
+        bottom: 15px;
     }
 
-    .business-card .btn {
-        position: absolute;
-        bottom: 4%;
+    .float-img {
+        width: 200px;
+    }
+
+    .tab-content-container h2{
+        font-weight: bolder;
+    }
+
+    @media (max-width: 1500px) {
+        .our-business {
+            padding: 40px 9%;
+        }
+
+        
+        .our-business .tab-title  .single-tab {
+            font-size: 13px;
+        }
+        .swiper .swiper-wrapper {
+            height: 300px;
+            margin-bottom: 15px;
+        }
+    
+        .swiper-slide .content {
+            height: 200px;
+            margin: 10px 30px;
+        }
+    
+        .swiper .swiper-wrapper img {
+            width: 60%;
+            margin-bottom: 30px;
+        }
+    
+        .swiper .swiper-slide a {
+            text-decoration: none;
+            background: #039BE5;
+            color: #fff;
+            padding: 3px 20px;
+            border-radius: 7px;
+            position: absolute;
+            bottom: 15px;
+        }
+
+        .tab-content-container h2{
+            font-size: 25px;
+        }
     }
 </style>

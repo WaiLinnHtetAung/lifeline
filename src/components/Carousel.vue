@@ -1,61 +1,45 @@
 <template>
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <!-- data-bs-ride="carousel" -->
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img style="filter: brightness(.8);" src="@/assets/images/head-office1.jpg" class="d-block w-100" alt="...">
-
-            
-          </div>
-
-          <div class="carousel-item">
-            <img style="filter: brightness(.8);" src="@/assets/images/carousel3.jpeg" alt="">
-            <div class="carousel-caption core-value">
-                <img src="@/assets/images/core-value.png" alt="">
-                <div>
-                    <h3>Our Core Value</h3>
-                    <ul >
-                        <li>Satification</li>
-                        <li>Trust</li>
-                        <li>Mutual Respect</li>
-                    </ul>
-                    <button class="btn btn-warning ms-2">About Us</button>
+    <div class="carousel-section">
+        <v-carousel show-arrows="hover" color="white" class="carousel">
+            <v-carousel-item >
+                <div class="head-office">
+                    <div class="content">
+                        <h2>STEP FORWARD</h2>
+                        <v-btn
+                            append-icon="mdi-arrow-right-bold-circle-outline"
+                        >
+                            Check Our Profile
+                            <template v-slot:append>
+                            <v-icon></v-icon>
+                            </template>
+                        </v-btn>
+                    </div>
+                    <div class="img">
+                        <img src="@/assets/images/head-office1.jpg" alt="">
+                    </div>
                 </div>
-            </div>
-            
-          </div>
+            </v-carousel-item>
+
+            <v-carousel-item
+                :src="require('@/assets/images/carousel6.jpg')"
+              cover
+            ></v-carousel-item>
           
-          <div class="carousel-item">
-            <img src="@/assets/images/carousel1.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption">
-                <div>
-                    <div class="line"></div>
-                    <img src="@/assets/images/ll.png" alt="">
-                    <div class="line"></div>
-                </div>
-                <h3>PROTECT THE HEALTH OF YOUR ENTIRE FAMILY WITH LIFELINE</h3>
-                <P>Stay Healthy, Stay Happy</P>
-            </div>
-            
-          </div>
-          <div class="carousel-item">
-            <img src="@/assets/images/carousel2.png" class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+            <v-carousel-item
+            :src="require('@/assets/images/carousel5.jpg')"
+              cover
+            ></v-carousel-item>
+
+            <v-carousel-item
+            :src="require('@/assets/images/carousel7.jpg')"
+              cover
+            ></v-carousel-item>
+
+            <v-carousel-item
+            :src="require('@/assets/images/carousel4.jpg')"
+              cover
+            ></v-carousel-item>
+        </v-carousel>
     </div>
 </template>
 
@@ -66,69 +50,116 @@
 </script>
 
 <style scoped>
-    .carousel-item img {
+
+    .carousel-section {
+        background-color: #e9e5e5;
+    }
+    .carousel {
+        width: 70%;
+        margin: 0 auto;
+    }
+    img {
+        object-fit: contain;
+    }
+
+    .head-office {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-around;
+        gap: 15px;
+        height: 100%;
+        background-color: #fff;
+    }
+
+    .head-office .content {
+        margin: 0 0 120px 30px;
+    }
+
+    .head-office .content h2 {
+        font-weight: bold;
+        color: var(--sec-color);
+        margin-bottom: 50px;
+        font-size: 48px;
+    }
+
+    .head-office .content button {
+        background-color: #0c74eb;
+        color: #fff;
+        border-radius: 10px;
+        height: 40px;
+    }
+
+    .head-office .content button i {
+        color: greenyellow;
+    }
+
+    .head-office .img {
+        width: 650px;
+        height: 350px;
+        border-radius: 50px !important;
+        overflow: hidden;
+    }
+
+    .head-office .img img {
         width: 100%;
-        height: 700px;
+        height: 100%;
         object-fit: cover;
     }
 
-    .carousel-item .carousel-caption .line {
-        height: 2px;
-        background: #ff8c00;
-        width: 100px;
+    @media (max-width: 1500px) {
+        .carousel {
+            width: 82%;
+            height: 450px !important;
+        }
+    
+        .head-office {
+            gap: 10px;
+            height: 100%;
+        }
+    
+        .head-office .content {
+            margin: 0 0 120px 30px;
+        }
+    
+        .head-office .content h2 {
+            margin-bottom: 50px;
+            font-size: 40px;
+        }
+    
+        .head-office .content button {
+            border-radius: 10px;
+            height: 40px;
+        }
+    
+        .head-office .img {
+            width: 600px;
+            height: 300px;
+        }
     }
 
-    .carousel-caption>div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .carousel-item .carousel-caption img {
-        width: 90px;
-        height: auto;
-    }
-
-    .carousel-caption h3 {
-        margin: 20px;
-        font-weight: 700;
-        font-size: 35px;
-    }
-
-    .carousel-caption p {
-        font-size: 18px;
-        color: #6e6c6c;
-    }
-    .carousel-caption {
-        width: 500px;
-        bottom: 20%;
-        left: 60%;
-    }
-
-    .carousel-caption.core-value {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        gap: 150px;
-        left: 30%;
-        text-align: start !important;
-    }
-
-    .carousel-caption.core-value img {
-        width: 350px;
-    }
-
-    .carousel-caption.core-value div {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        align-items: start;
-        justify-content: start;
-        margin-bottom: 20px;
-    }
-
-    .carousel-caption.carousel-caption.core-value ul li {
-        font-size: 18px;
+    @media (max-width: 1100px) {
+        .carousel {
+            width: 86%;
+            height: 450px !important;
+        }
+    
+        .head-office {
+            gap: 10px;
+            height: 100%;
+        }
+    
+        .head-office .content {
+            margin: 0 0 120px 30px;
+        }
+    
+        .head-office .content h2 {
+            margin-bottom: 50px;
+            font-size: 35px;
+        }
+    
+        .head-office .img {
+            width: 500px;
+            height: 300px;
+        }
     }
 </style>

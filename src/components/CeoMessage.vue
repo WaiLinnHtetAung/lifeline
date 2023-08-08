@@ -26,7 +26,7 @@
 <style scoped>
     .ceo-message {
         padding: 10px 15%;
-        background-image: linear-gradient(to right, rgb(86,192,226, .8), rgba(255, 187, 0, 0.5));
+        background-image: linear-gradient(to left, rgba(142, 222, 248, 0.8), rgba(255, 174, 0, 0.5));
         height: 300px;
         margin: 140px auto 50px;
     }

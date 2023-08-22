@@ -84,9 +84,10 @@
                         <v-card-text class="m-3">
                             <img class="float-start float-img m-2" :src="require('@/assets/images/ll.png')" alt="">   
                             <h2>Lifeline</h2>
-                            <p class="mb-0">
+                            <p class="mb-3">
                                 Donec venenatis vulputate lorem. Aenean viverra rhoncus pede. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit minima facere expedita molestias assumenda doloribus, cumque ipsum adipisci praesentium, tempora aliquid suscipit autem, nostrum dolore quam eius commodi? Facere, sed veniam! Repellendus quaerat, tempore dolorem culpa, laudantium dignissimos quas sed, natus facere aperiam tenetur similique eum deleniti cumque? Porro, similique. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. Fusce commodo aliquam arcu. Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi.
                             </p>
+                            <router-link to="#">View More</router-link>
                         </v-card-text>
                     </v-card>
                     </v-window-item>
@@ -95,9 +96,10 @@
                         <v-card-text class="m-3">
                             <img class="float-start float-img m-2" :src="require('@/assets/images/mbd.png')" alt="">   
                             <h2>Myanmar Booster Distribution</h2>
-                            <p class="mb-0">
+                            <p class="mb-3">
                                 Donec venenatis vulputate lorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione maxime minima blanditiis saepe reprehenderit quo corrupti praesentium, natus vel molestiae. Aenean viverra rhoncus pede. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit minima facere expedita molestias assumenda doloribus, cumque ipsum adipisci praesentium, tempora aliquid suscipit autem, nostrum dolore quam eius commodi? Facere, sed veniam! Repellendus quaerat, tempore dolorem culpa, laudantium dignissimos quas sed, natus facere aperiam tenetur similique eum deleniti cumque? Porro, similique. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. Fusce commodo aliquam arcu. Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi.
                             </p>
+                                <router-link to="#">View More</router-link>
                         </v-card-text>
                     </v-card>
                     </v-window-item>
@@ -106,9 +108,10 @@
                             <v-card-text class="m-3">
                                 <img class="float-start float-img m-2" :src="require('@/assets/images/loyan-lifeline.png')" alt="">   
                                 <h2>Loyal Lifeline</h2>
-                                <p class="mb-0">
+                                <p class="mb-3">
                                     Donec venenatis vulputate lorem. Aenean viverra rhoncus pede. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit minima facere expedita molestias assumenda doloribus, cumque ipsum adipisci praesentium, tempora aliquid suscipit autem, nostrum dolore quam eius commodi? Facere, sed veniam! Repellendus quaerat, tempore dolorem culpa, laudantium dignissimos quas sed, natus facere aperiam tenetur similique eum deleniti cumque? Porro, similique. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. Fusce commodo aliquam arcu. Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi.
                                 </p>
+                                <router-link to="#">View More</router-link>
                             </v-card-text>
                         </v-card>
                     </v-window-item>
@@ -117,9 +120,10 @@
                             <v-card-text class="m-3">
                                 <img class="float-start float-img m-2" :src="require('@/assets/images/lifecare.png')" alt="">   
                                 <h2>Lifecare</h2>
-                                <p class="mb-0">
+                                <p class="mb-3">
                                     Donec venenatis vulputate lorem. Aenean viverra rhoncus pede. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit minima facere expedita molestias assumenda doloribus, cumque ipsum adipisci praesentium, tempora aliquid suscipit autem, nostrum dolore quam eius commodi? Facere, sed veniam! Repellendus quaerat, tempore dolorem culpa, laudantium dignissimos quas sed, natus facere aperiam tenetur similique eum deleniti cumque? Porro, similique. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. Fusce commodo aliquam arcu. Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi.
                                 </p>
+                                <router-link to="#">View More</router-link>
                             </v-card-text>
                         </v-card>
                     </v-window-item>
@@ -211,7 +215,15 @@ import { onMounted, ref } from 'vue'
         font-weight: bolder;
     }
 
-    @media (max-width: 1500px) {
+    .tab-content-container a {
+        text-decoration: none;
+        color: #fff;
+        background: var(--sec-color);
+        padding: 5px 15px;
+        border-radius: 5px;
+    }
+
+    @media (max-width: 1600px) {
         .our-business {
             padding: 40px 9%;
         }
@@ -247,6 +259,12 @@ import { onMounted, ref } from 'vue'
 
         .tab-content-container h2{
             font-size: 25px;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .our-business {
+            padding: 40px 3%;
         }
     }
 </style>

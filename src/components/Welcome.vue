@@ -42,7 +42,7 @@
         text-decoration: none;
         background: var(--sec-color);
         color: #fff;
-        padding: 10px 15px 5px;
+        padding: 10px 15px;
         border-radius: 5px;
     }
 
@@ -50,7 +50,7 @@
         padding: 0px 15%;
     }
 
-    @media (max-width: 1500px) {
+    @media (max-width: 1600px) {
         .welcome {
             padding: 60px 9% 20px;
         }
@@ -73,6 +73,12 @@
     
         .bar {
             padding: 0px 9%;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .welcome {
+            padding: 60px 3% 20px;
         }
     }
 

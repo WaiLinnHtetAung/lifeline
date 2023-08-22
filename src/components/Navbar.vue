@@ -17,7 +17,7 @@
             <router-link to="#"><i style="color: #0072b1" class="fa-brands fa-linkedin"></i></router-link>
         </div>
     </nav>
-    <v-navigation-drawer app v-model="drawer" :color="navbarColor" id="drawer" temporary>
+    <v-navigation-drawer app v-model="drawer"  id="drawer" temporary>
         <v-list>
             <v-list-item @click="navigate('/')">
                 <v-list-item-title>Home</v-list-item-title>
@@ -60,74 +60,73 @@
 
     <nav class="nav2">
         <div class="menu-items">
-            <div class="menu">
+            <div class="menu home" :class="{active: currentRoute == '/'}">
                 <i class="fa-solid fa-house-chimney mb-1"></i>
-                <div><router-link to="/">Home</router-link></div>
+                <div><router-link to="/">Home </router-link></div>
             </div>
-            <div class="menu">
+            <div class="menu" :class="{active: currentRoute.slice(0,9) == '/about-us'}">
                 <div><router-link to="#">About Us</router-link></div>
                 <i class="fa-solid fa-sort-down"></i>
                 <div class="dropdown">
-                    <router-link to="#">Introduction</router-link>
-                    <router-link to="#">CEO Message</router-link>
-                    <router-link to="#">Vision & Mission</router-link>
-                    <router-link to="#">Company Milestones</router-link>
-                    <router-link to="#">Distribution Network</router-link>
-                    <router-link to="#">Regulatory Strength</router-link>
+                    <router-link to="/about-us/introduction">Introduction</router-link>
+                    <router-link to="/about-us/ceo-message">CEO Message</router-link>
+                    <router-link to="/about-us/vision-mission">Vision & Mission</router-link>
+                    <router-link to="/about-us/company-milestone">Company Milestones</router-link>
+                    <router-link to="/coming-soon">Distribution Network</router-link>
+                    <router-link to="/coming-soon">Regulatory Strength</router-link>
                 </div>
             </div>
-            <div class="menu">
+            <div class="menu" :class="{active: currentRoute.slice(0,9) == '/business'}">
                 <div><router-link to="#">Business</router-link></div>
                 <i class="fa-solid fa-sort-down"></i>
                 <div class="dropdown">
-                    <router-link to="#">Lifeline</router-link>
-                    <router-link to="#">Myanmar Booster Distribution</router-link>
+                    <router-link to="/business/lifeline">Lifeline</router-link>
+                    <router-link to="/business/mbd">Myanmar Booster Distribution</router-link>
                     <router-link to="#">Loyal Lifeline <i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus text-secondary"></i>
                         <div class="subMenu text-center">
-                            <router-link to="#">Loyal Lifeline</router-link>
-                            <router-link to="#">Lifecare Medical Services</router-link>
+                            <router-link to="/business/loyal-lifeline">Loyal Lifeline</router-link>
+                            <router-link to="/business/lifecare">Lifecare Medical Services</router-link>
                         </div>
                     </router-link>
                 </div>
             </div>
-            <div class="menu">
-                <div><router-link to="#">Our Products & Services</router-link></div>
+            <div class="menu" :class="{active: currentRoute.slice(0,8) == '/product' || currentRoute.slice(0,8) == '/service'}">
+                <div><router-link to="#" >Our Products & Services</router-link></div>
                 <i class="fa-solid fa-sort-down"></i>
                 <div class="dropdown">
                     <router-link to="#">Products <i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus text-secondary"></i>
                         <div class="subMenu text-center">
-                            <router-link to="#">Product Catalouge</router-link>
-                            <router-link to="#">Promotions</router-link>
+                            <router-link to="/product-service/catalog">Product Catalogue</router-link>
+                            <router-link to="/coming-soon">Promotions</router-link>
                         </div>
                     </router-link>
-                    <router-link to="#">Services & Promotions</router-link>
+                    <router-link to="/service-promotion/service">Services & Promotions</router-link>
                 </div>
             </div>
-            <div class="menu">
+            <div class="menu" :class="{active: currentRoute.slice(0,12) == '/partnership'}">
                 <div><router-link to="#">Partnerships</router-link></div>
                 <i class="fa-solid fa-sort-down"></i>
                 <div class="dropdown">
-                    <router-link to="#">Principles</router-link>
-                    <router-link to="#">Hospitals</router-link>
+                    <router-link to="/partnership/principles">Principles</router-link>
+                    <router-link to="/partnership/hospitals">Hospitals</router-link>
                 </div>
             </div>
-            <div class="menu">
+            <div class="menu" :class="{active: currentRoute.slice(0,5) == '/news'}">
                 <div><router-link to="#">News & Events</router-link></div>
                 <i class="fa-solid fa-sort-down"></i>
                 <div class="dropdown">
-                    <router-link to="#">CSR Activities</router-link>
-                    <router-link to="#">News</router-link>
+                    <router-link to="/news-events/csr-activities">CSR Activities</router-link>
+                    <router-link to="/coming-soon">Events</router-link>
+                    <router-link to="/news-events/news">News</router-link>
                 </div>
             </div>
             <div class="menu">
                 <div>&nbsp;</div>
-                <div><router-link to="#">Career</router-link></div>
+                <div><router-link to="/coming-soon">Career</router-link></div>
                 <i class="fa-solid fa-sort-down" style="visibility:hidden;"></i>
             </div>
             <div class="menu">
-                <div>&nbsp;</div>
-                <div><router-link to="#">Contact</router-link></div>
-                <i class="fa-solid fa-sort-down" style="visibility:hidden;"></i>
+                <div><router-link to="/contact-us">Contact</router-link></div>
             </div>
         </div>
 
@@ -169,12 +168,17 @@ export default {
         const drawer = ref(false);
         const router = useRouter();
         const language = ref('ENG');
+        const currentRoute = ref('');
         const navigate = (route) => {
             router.push(route);
             drawer.value = false; // Close the drawer after navigation (for mobile)
         };
+
+        router.afterEach(to => {
+            currentRoute.value = to.path;
+        })
         
-        return {navigate, drawer, language}
+        return {navigate, drawer, language, currentRoute}
     }
 }
 
@@ -283,7 +287,6 @@ export default {
     }
 
     .v-list-item {
-        border-bottom: 1px solid #ccc !important;
         min-height: 20px !important;
         cursor: pointer;
     }
@@ -296,6 +299,10 @@ export default {
         color: #fff !important;
     }
 
+    .home {
+        padding: 10px 10px !important;
+    }
+
     /* -----------dropdown------------ */
     .menu .dropdown {
         position: absolute;
@@ -305,8 +312,16 @@ export default {
         z-index: 9999;
     }
 
-    .menu:hover {
+    .menu:hover{
         background: #E1F5FE;
+    }
+
+    .active {
+        background: #E1F5FE;
+    }
+
+    .menu.active div a {
+        color: #000;
     }
 
     .menu:hover .fa-house-chimney {
@@ -390,7 +405,7 @@ export default {
     }
 
 
-    @media (max-width:1500px) {
+    @media (max-width:1600px) {
         .nav1 {
             padding: 10px 9%;
             display: flex;
@@ -428,6 +443,7 @@ export default {
             position: sticky;
             top: 0;
             z-index: 9999;
+            margin-top: -2px;
         }
     
         .nav2 .menu-items {
@@ -467,7 +483,6 @@ export default {
         }
 
         .v-list-item {
-            border-bottom: 1px solid #ccc !important;
             max-height: 27px !important;
         }
     
@@ -477,6 +492,10 @@ export default {
     
         .v-list-item:hover span {
             color: #fff !important;
+        }
+
+        .home {
+            padding: 5.5px 10px !important;
         }
     
         /* -----------dropdown------------ */
@@ -494,6 +513,14 @@ export default {
             transition: all .3s ease-in-out;
             color: #000;
         }
+
+        .active {
+            background: #E1F5FE;
+        }
+    
+        .menu.active div a {
+            color: #000;
+        }
     
         /* ----------- sub menu dropdown ----------*/
         .menu .dropdown a .subMenu a{
@@ -507,9 +534,9 @@ export default {
     
     }
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1200px) {
         .nav1 {
-            padding: 10px 7%;
+            padding: 10px 3%;
             gap: 10px;
             height: 85px;
         }
@@ -532,7 +559,7 @@ export default {
     
         /* ----------------------menu navbar---------------------- */
         .nav2 {
-            padding: 15px 7%;
+            padding: 15px 3%;
             height: 35px !important;
         }
     

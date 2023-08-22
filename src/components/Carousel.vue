@@ -39,6 +39,10 @@
             :src="require('@/assets/images/carousel4.jpg')"
               cover
             ></v-carousel-item>
+            <v-carousel-item
+            :src="require('@/assets/images/banner.png')"
+              cover
+            ></v-carousel-item>
         </v-carousel>
     </div>
 </template>
@@ -87,6 +91,7 @@
         color: #fff;
         border-radius: 10px;
         height: 40px;
+        margin-left: 15px;
     }
 
     .head-office .content button i {
@@ -98,6 +103,7 @@
         height: 350px;
         border-radius: 50px !important;
         overflow: hidden;
+        margin-bottom: 60px;
     }
 
     .head-office .img img {
@@ -106,12 +112,12 @@
         object-fit: cover;
     }
 
-    @media (max-width: 1500px) {
+    @media (max-width: 1600px) {
         .carousel {
             width: 82%;
             height: 450px !important;
         }
-    
+
         .head-office {
             gap: 10px;
             height: 100%;
@@ -137,9 +143,10 @@
         }
     }
 
+
     @media (max-width: 1100px) {
         .carousel {
-            width: 86%;
+            width: 90%;
             height: 450px !important;
         }
     

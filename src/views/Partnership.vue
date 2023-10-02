@@ -1,5 +1,5 @@
 <template>
-    <div class="partnership">
+    <div class="partnership" :class="{hospital: slug == 'hospitals'}">
         <div class="row">
             <div class="col-lg-3 col-md-4 col-sm-12 p-0 ">
                 <div class="menu  w-100">
@@ -31,6 +31,10 @@ export default {
 <style scoped>
 .partnership {
     padding: 30px 15%;
+}
+
+.partnership.hospital {
+    background: #efefef;
 }
 
 .partnership .menu {

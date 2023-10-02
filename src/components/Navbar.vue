@@ -1,6 +1,6 @@
 <template>
     <nav class="nav1">
-        <div class="brand">
+        <div class="brand pointer" @click="navigate('/')">
             <img src="@/assets/images/ll.png" alt="">
             <h2>
                 LIFELINE GROUP OF COMPANIES
@@ -60,7 +60,7 @@
 
     <nav class="nav2">
         <div class="menu-items">
-            <div class="menu home" :class="{active: currentRoute == '/'}">
+            <div class="menu home pointer" :class="{active: currentRoute == '/'}" @click="navigate('/')">
                 <i class="fa-solid fa-house-chimney mb-1"></i>
                 <div><router-link to="/">Home </router-link></div>
             </div>
@@ -120,12 +120,12 @@
                     <router-link to="/news-events/news">News</router-link>
                 </div>
             </div>
-            <div class="menu">
+            <div class="menu pointer" @click="navigate('/coming-soon')">
                 <div>&nbsp;</div>
                 <div><router-link to="/coming-soon">Career</router-link></div>
                 <i class="fa-solid fa-sort-down" style="visibility:hidden;"></i>
             </div>
-            <div class="menu">
+            <div class="menu pointer"  @click="navigate('/coming-soon')">
                 <div><router-link to="/contact-us">Contact</router-link></div>
             </div>
         </div>

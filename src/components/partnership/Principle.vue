@@ -14,7 +14,13 @@
 </template>
 
 <script>
+import { onMounted } from 'vue'
     export default {
+        setup() {
+            onMounted(() => {
+                window.scrollTo(0,0)
+            })
+        }
     }
 </script>
 

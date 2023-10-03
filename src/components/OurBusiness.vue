@@ -17,32 +17,9 @@
                   <v-icon start style="margin-left: 10px;">
                     mdi-bag-personal
                   </v-icon>
-                  Our Business
+                  Our Activities
                 </v-tab>
-                <v-tab value="option-2" class="single-tab">
-                  <v-icon start style="margin-left: 10px;">
-                    <img :src="require('@/assets/images/llbg.png')" alt="">
-                  </v-icon>
-                    Lifeline
-                </v-tab>
-                <v-tab value="option-3" class="single-tab">
-                  <v-icon start style="margin-left: 10px;">
-                    <img :src="require('@/assets/images/mbdbg.png')" alt="">
-                  </v-icon>
-                  Myanmar Booster Distribution
-                </v-tab>
-                <v-tab value="option-4" class="single-tab">
-                    <v-icon start style="margin-left: 10px;">
-                      <img :src="require('@/assets/images/loyan-lifelinebg.png')" alt="">
-                    </v-icon>
-                    Loyal Lifeline
-                  </v-tab>
-                  <v-tab value="option-5" class="single-tab">
-                    <v-icon start style="margin-left: 10px;">
-                      <img :src="require('@/assets/images/lifecarebg.png')" alt="">
-                    </v-icon>
-                    Lifecare
-                  </v-tab>
+              
                 </v-tabs>
               
                 <v-window v-model="tab" class="tab-content-container" style="border-left: 1px solid var(--sec-color);">
@@ -50,82 +27,15 @@
                     <v-card flat>
                         <div class="swiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
+                                <div class="swiper-slide" v-for="i in 6" :key="i">
                                     <div class="content">
-                                        <img :src="require('@/assets/images/ll.png')" alt="">
-                                        <router-link to="#">Lifeline</router-link>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="content">
-                                        <img class="mbd-img" :src="require('@/assets/images/mbd.png')" alt="">
-                                        <router-link to="#">MBD</router-link>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="content">
-                                        <img :src="require('@/assets/images/loyan-lifeline.png')" alt="">
-                                        <router-link to="#">Loyal Lifeline</router-link>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="content">
-                                        <img :src="require('@/assets/images/lifecare.png')" alt="">
-                                        <router-link to="#">Lifecare</router-link>
+                                        <img :src="require(`@/assets/images/csr/csr${i}.png`)" alt="">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-pagination" id="swiper-paginate"></div>
                     </v-card>
-                    </v-window-item>
-                    <v-window-item value="option-2">
-                    <v-card flat>
-                        <v-card-text class="m-3">
-                            <img class="float-start float-img m-2" :src="require('@/assets/images/ll.png')" alt="">   
-                            <h2>Lifeline</h2>
-                            <p class="mb-3">
-                                Donec venenatis vulputate lorem. Aenean viverra rhoncus pede. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit minima facere expedita molestias assumenda doloribus, cumque ipsum adipisci praesentium, tempora aliquid suscipit autem, nostrum dolore quam eius commodi? Facere, sed veniam! Repellendus quaerat, tempore dolorem culpa, laudantium dignissimos quas sed, natus facere aperiam tenetur similique eum deleniti cumque? Porro, similique. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. Fusce commodo aliquam arcu. Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi.
-                            </p>
-                            <router-link to="#">View More</router-link>
-                        </v-card-text>
-                    </v-card>
-                    </v-window-item>
-                    <v-window-item value="option-3">
-                    <v-card flat>
-                        <v-card-text class="m-3">
-                            <img class="float-start float-img m-2" :src="require('@/assets/images/mbd.png')" alt="">   
-                            <h2>Myanmar Booster Distribution</h2>
-                            <p class="mb-3">
-                                Donec venenatis vulputate lorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione maxime minima blanditiis saepe reprehenderit quo corrupti praesentium, natus vel molestiae. Aenean viverra rhoncus pede. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit minima facere expedita molestias assumenda doloribus, cumque ipsum adipisci praesentium, tempora aliquid suscipit autem, nostrum dolore quam eius commodi? Facere, sed veniam! Repellendus quaerat, tempore dolorem culpa, laudantium dignissimos quas sed, natus facere aperiam tenetur similique eum deleniti cumque? Porro, similique. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. Fusce commodo aliquam arcu. Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi.
-                            </p>
-                                <router-link to="#">View More</router-link>
-                        </v-card-text>
-                    </v-card>
-                    </v-window-item>
-                    <v-window-item value="option-4">
-                        <v-card flat>
-                            <v-card-text class="m-3">
-                                <img class="float-start float-img m-2" :src="require('@/assets/images/loyan-lifeline.png')" alt="">   
-                                <h2>Loyal Lifeline</h2>
-                                <p class="mb-3">
-                                    Donec venenatis vulputate lorem. Aenean viverra rhoncus pede. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit minima facere expedita molestias assumenda doloribus, cumque ipsum adipisci praesentium, tempora aliquid suscipit autem, nostrum dolore quam eius commodi? Facere, sed veniam! Repellendus quaerat, tempore dolorem culpa, laudantium dignissimos quas sed, natus facere aperiam tenetur similique eum deleniti cumque? Porro, similique. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. Fusce commodo aliquam arcu. Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi.
-                                </p>
-                                <router-link to="#">View More</router-link>
-                            </v-card-text>
-                        </v-card>
-                    </v-window-item>
-                    <v-window-item value="option-5">
-                        <v-card flat>
-                            <v-card-text class="m-3">
-                                <img class="float-start float-img m-2" :src="require('@/assets/images/lifecare.png')" alt="">   
-                                <h2>Lifecare</h2>
-                                <p class="mb-3">
-                                    Donec venenatis vulputate lorem. Aenean viverra rhoncus pede. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit minima facere expedita molestias assumenda doloribus, cumque ipsum adipisci praesentium, tempora aliquid suscipit autem, nostrum dolore quam eius commodi? Facere, sed veniam! Repellendus quaerat, tempore dolorem culpa, laudantium dignissimos quas sed, natus facere aperiam tenetur similique eum deleniti cumque? Porro, similique. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. Fusce commodo aliquam arcu. Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi.
-                                </p>
-                                <router-link to="#">View More</router-link>
-                            </v-card-text>
-                        </v-card>
                     </v-window-item>
                 </v-window>
             </div>
@@ -167,7 +77,7 @@ import { onMounted, ref } from 'vue'
         padding: 40px 15%;
     }
     .swiper .swiper-wrapper {
-        height: 320px;
+        height: 370px;
         margin-bottom: 15px;
     }
 
@@ -182,15 +92,17 @@ import { onMounted, ref } from 'vue'
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: #fdf5e8;
         height: 250px;
         margin: 10px 30px;
         position: relative;
+        padding: 30px 10px;
     }
 
     .swiper .swiper-wrapper img {
-        width: 60%;
-        margin-bottom: 30px;
+        width: 500px;
+        height: 300px;
+        object-fit: cover;
+        margin: 20px auto;
     }
 
     .swiper .swiper-wrapper .mbd-img {

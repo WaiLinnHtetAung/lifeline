@@ -65,6 +65,11 @@
     min-height: 60px !important;
 }
 
+#drawer .v-list-item.head-menu .v-list-item-title {
+    align-items: center !important;
+    font-size: 20px !important;
+}
+
 #drawer .v-list-item {
     min-height: 50px !important;
 }
@@ -84,12 +89,33 @@
 }
 
 #drawer .v-list-item img {
-    width: 60px;
+    width: 80px;
+}
+
+@media (max-width: 650px) {
+    #drawer .v-list-item img {
+        width: 70px;
+    }
+    #drawer .v-list-item.head-menu .v-list-item-title {
+        font-size: 18px !important;
+    }
+}
+
+@media (max-width: 550px) {
+    #drawer .v-list-item img {
+        width: 60px;
+    }
+    #drawer .v-list-item.head-menu .v-list-item-title {
+        font-size: 15px !important;
+    }
 }
 
 @media(max-width: 450px) {
     #drawer .v-list-item img {
         width: 50px;
+    }
+    #drawer .v-list-item.head-menu .v-list-item-title {
+        font-size: 13px !important;
     }
     #drawer .head-menu .v-list-item-title {
         font-size: 13px !important;

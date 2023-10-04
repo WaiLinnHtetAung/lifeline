@@ -6,7 +6,10 @@
     </div>
 
     <!-- Toggle button for mobile -->
-    <v-app-bar-nav-icon @click="drawer = !drawer" id="mobile-menu"></v-app-bar-nav-icon>
+    <v-app-bar-nav-icon
+      @click="drawer = !drawer"
+      id="mobile-menu"
+    ></v-app-bar-nav-icon>
 
     <div class="social">
       <router-link to="#"
@@ -28,186 +31,223 @@
   </nav>
   <v-navigation-drawer app v-model="drawer" id="drawer" temporary>
     <v-list>
-        <v-list-item @click="navigate('/')" class="head-menu">
-            <v-list-item-title style="font-size: 14px; color: #50c4ff">
-            <img src="@/assets/images/ll.png" alt="" /> LIFELINE GROUP OF
-            COMPANIES</v-list-item-title
-            >
-        </v-list-item>
-        <v-list-item @click="navigate('/')">
+      <v-list-item @click="navigate('/')" class="head-menu">
+        <v-list-item-title style="font-size: 14px; color: #50c4ff">
+          <img src="@/assets/images/ll.png" alt="" />
+          <span>LIFELINE GROUP OF COMPANIES</span>
+        </v-list-item-title>
+      </v-list-item>
+      <v-list-item @click="navigate('/')">
+        <v-list-item-title class="main-title">
+          <v-icon icon="mdi-home"></v-icon> Home</v-list-item-title
+        >
+      </v-list-item>
+
+      <v-list-group value="About Us">
+        <template v-slot:activator="{ props }">
+          <v-list-item v-bind="props">
             <v-list-item-title class="main-title">
-            <v-icon icon="mdi-home"></v-icon> Home</v-list-item-title
+              <v-icon icon="mdi-account-group"></v-icon>About
+              Us</v-list-item-title
             >
+          </v-list-item>
+        </template>
+
+        <v-list-item @click="navigate('/about-us/introduction')">
+          <v-list-item-title
+            ><v-icon icon="mdi-circle-small"></v-icon
+            >Introduction</v-list-item-title
+          >
+        </v-list-item>
+        <v-list-item @click="navigate('/about-us/ceo-message')">
+          <v-list-item-title
+            ><v-icon icon="mdi-circle-small"></v-icon>CEO
+            Message</v-list-item-title
+          >
+        </v-list-item>
+        <v-list-item @click="navigate('/about-us/vision-mission')">
+          <v-list-item-title
+            ><v-icon icon="mdi-circle-small"></v-icon>Vision &
+            Mission</v-list-item-title
+          >
+        </v-list-item>
+        <v-list-item @click="navigate('/about-us/company-milestone')">
+          <v-list-item-title
+            ><v-icon icon="mdi-circle-small"></v-icon>Company
+            Milestones</v-list-item-title
+          >
+        </v-list-item>
+        <v-list-item @click="navigate('/coming-soon')">
+          <v-list-item-title
+            ><v-icon icon="mdi-circle-small"></v-icon>Distribution
+            Network</v-list-item-title
+          >
+        </v-list-item>
+        <v-list-item @click="navigate('/coming-soon')">
+          <v-list-item-title
+            ><v-icon icon="mdi-circle-small"></v-icon>Company
+            Strength</v-list-item-title
+          >
+        </v-list-item>
+      </v-list-group>
+
+      <v-list-group value="Business">
+        <template v-slot:activator="{ props }">
+          <v-list-item v-bind="props">
+            <v-list-item-title class="main-title">
+              <v-icon icon="mdi-briefcase-check"></v-icon
+              >Business</v-list-item-title
+            >
+          </v-list-item>
+        </template>
+
+        <v-list-item @click="navigate('/business/lifeline')">
+          <v-list-item-title
+            ><v-icon icon="mdi-circle-small"></v-icon>Lifeline Company
+            Limited</v-list-item-title
+          >
         </v-list-item>
 
-        <v-list-group value="About Us">
-            <template v-slot:activator="{ props }">
+        <v-list-item @click="navigate('/business/mbd')">
+          <v-list-item-title
+            ><v-icon icon="mdi-circle-small"></v-icon>Myanmar Booster
+            Distribution Company Limited</v-list-item-title
+          >
+        </v-list-item>
+
+        <v-list-group value="Loyal Lifeline Company Limited">
+          <template v-slot:activator="{ props }">
             <v-list-item v-bind="props">
-                <v-list-item-title class="main-title">
-                <v-icon icon="mdi-account-group"></v-icon>About Us</v-list-item-title
-                >
-            </v-list-item>
-            </template>
-
-            <v-list-item @click="navigate('/')">
-            <v-list-item-title
-                ><v-icon icon="mdi-circle-small"></v-icon>Introduction</v-list-item-title
-            >
-            </v-list-item>
-            <v-list-item @click="navigate('/')">
-            <v-list-item-title
-                ><v-icon icon="mdi-circle-small"></v-icon>CEO Message</v-list-item-title
-            >
-            </v-list-item>
-            <v-list-item @click="navigate('/')">
-            <v-list-item-title
-                ><v-icon icon="mdi-circle-small"></v-icon>Vision & Mission</v-list-item-title
-            >
-            </v-list-item>
-            <v-list-item @click="navigate('/')">
-            <v-list-item-title
-                ><v-icon icon="mdi-circle-small"></v-icon>Company
-                Milestones</v-list-item-title
-            >
-            </v-list-item>
-            <v-list-item @click="navigate('/')">
-            <v-list-item-title
-                ><v-icon icon="mdi-circle-small"></v-icon>Distribution
-                Network</v-list-item-title
-            >
-            </v-list-item>
-            <v-list-item @click="navigate('/')">
-            <v-list-item-title
-                ><v-icon icon="mdi-circle-small"></v-icon>Company Strength</v-list-item-title
-            >
-            </v-list-item>
-        </v-list-group>
-
-        <v-list-group value="Business">
-            <template v-slot:activator="{ props }">
-            <v-list-item v-bind="props">
-                <v-list-item-title class="main-title">
-                <v-icon icon="mdi-briefcase-check"></v-icon>Business</v-list-item-title
-                >
-            </v-list-item>
-            </template>
-
-            <v-list-item @click="navigate('/')">
-            <v-list-item-title
-                ><v-icon icon="mdi-circle-small"></v-icon>Lifeline Company
-                Limited</v-list-item-title
-            >
-            </v-list-item>
-
-            <v-list-item @click="navigate('/')">
-            <v-list-item-title
-                ><v-icon icon="mdi-circle-small"></v-icon>Myanmar Booster Distribution Company
-                Limited</v-list-item-title
-            >
-            </v-list-item>
-
-            <v-list-group value="Loyal Lifeline Company Limited">
-            <template v-slot:activator="{ props }">
-                <v-list-item v-bind="props">
-                <v-list-item-title
-                    ><v-icon icon="mdi-circle-small"></v-icon>Loyal Lifeline Company
-                    Limited</v-list-item-title
-                >
-                </v-list-item>
-            </template>
-
-            <v-list-item @click="navigate('/')">
-                <v-list-item-title
+              <v-list-item-title
                 ><v-icon icon="mdi-circle-small"></v-icon>Loyal Lifeline Company
                 Limited</v-list-item-title
-                >
+              >
             </v-list-item>
-            <v-list-item @click="navigate('/')">
-                <v-list-item-title
-                ><v-icon icon="mdi-circle-small"></v-icon>Lifecare Medical
-                Services</v-list-item-title
-                >
-            </v-list-item>
-            </v-list-group>
-        </v-list-group>
+          </template>
 
-        <v-list-group value="Our Products">
-            <template v-slot:activator="{ props }">
-                <v-list-item v-bind="props">
-                    <v-list-item-title class="main-title">
-                    <v-icon icon="mdi-pill"></v-icon>Products & Services</v-list-item-title
-                    >
-                </v-list-item>
-            </template>
-
-            <v-list-group value="Products">
-                <template v-slot:activator="{ props }">
-                    <v-list-item v-bind="props">
-                        <v-list-item-title> <v-icon icon="mdi-circle-small"></v-icon>Products</v-list-item-title>
-                    </v-list-item>
-                </template>
-
-                <v-list-item @click="navigate('/')">
-                    <v-list-item-title> <v-icon icon="mdi-circle-small"></v-icon> Product Catalogue</v-list-item-title>
-                </v-list-item>
-                <v-list-item @click="navigate('/')">
-                    <v-list-item-title> <v-icon icon="mdi-circle-small"></v-icon> Promotions</v-list-item-title>
-                </v-list-item>
-            </v-list-group>
-
-            <v-list-item @click="navigate('/')">
-                <v-list-item-title> <v-icon icon="mdi-circle-small"></v-icon> Services & Promotions</v-list-item-title>
-            </v-list-item>
-        </v-list-group>
-
-        <v-list-group value="Partnership">
-            <template v-slot:activator="{ props }">
-                <v-list-item v-bind="props">
-                    <v-list-item-title class="main-title">
-                    <v-icon icon="mdi-handshake"></v-icon>Partnerships</v-list-item-title
-                    >
-                </v-list-item>
-            </template>
-
-            <v-list-item @click="navigate('/')">
-                <v-list-item-title> <v-icon icon="mdi-circle-small"></v-icon> Principles</v-list-item-title>
-            </v-list-item>
-            <v-list-item @click="navigate('/')">
-                <v-list-item-title> <v-icon icon="mdi-circle-small"></v-icon> Hospitals</v-list-item-title>
-            </v-list-item>
-        </v-list-group>
-
-        <v-list-group value="news">
-            <template v-slot:activator="{ props }">
-                <v-list-item v-bind="props">
-                    <v-list-item-title class="main-title">
-                    <v-icon icon="mdi-calendar-star"></v-icon>News & Events</v-list-item-title
-                    >
-                </v-list-item>
-            </template>
-
-            <v-list-item @click="navigate('/')">
-                <v-list-item-title> <v-icon icon="mdi-circle-small"></v-icon>CSR Activities</v-list-item-title>
-            </v-list-item>
-            <v-list-item @click="navigate('/')">
-                <v-list-item-title> <v-icon icon="mdi-circle-small"></v-icon> Events</v-list-item-title>
-            </v-list-item>
-            <v-list-item @click="navigate('/')">
-                <v-list-item-title> <v-icon icon="mdi-circle-small"></v-icon>News</v-list-item-title>
-            </v-list-item>
-        </v-list-group>
-
-        <v-list-item @click="navigate('/')">
-            <v-list-item-title class="main-title">
-            <v-icon icon="mdi-book-edit"></v-icon> Career</v-list-item-title
+          <v-list-item @click="navigate('/business/loyal-lifeline')">
+            <v-list-item-title
+              ><v-icon icon="mdi-circle-small"></v-icon>Loyal Lifeline Company
+              Limited</v-list-item-title
             >
-        </v-list-item>
-
-        <v-list-item @click="navigate('/')">
-            <v-list-item-title class="main-title">
-            <v-icon icon="mdi-card-account-phone"></v-icon>Contact</v-list-item-title
+          </v-list-item>
+          <v-list-item @click="navigate('/business/lifecare')">
+            <v-list-item-title
+              ><v-icon icon="mdi-circle-small"></v-icon>Lifecare Medical
+              Services</v-list-item-title
             >
+          </v-list-item>
+        </v-list-group>
+      </v-list-group>
+
+      <v-list-group value="Our Products">
+        <template v-slot:activator="{ props }">
+          <v-list-item v-bind="props">
+            <v-list-item-title class="main-title">
+              <v-icon icon="mdi-pill"></v-icon>Products &
+              Services</v-list-item-title
+            >
+          </v-list-item>
+        </template>
+
+        <v-list-group value="Products">
+          <template v-slot:activator="{ props }">
+            <v-list-item v-bind="props">
+              <v-list-item-title>
+                <v-icon icon="mdi-circle-small"></v-icon
+                >Products</v-list-item-title
+              >
+            </v-list-item>
+          </template>
+
+          <v-list-item @click="navigate('/product-service/catalog')">
+            <v-list-item-title>
+              <v-icon icon="mdi-circle-small"></v-icon> Product
+              Catalogue</v-list-item-title
+            >
+          </v-list-item>
+          <v-list-item @click="navigate('/coming-soon')">
+            <v-list-item-title>
+              <v-icon icon="mdi-circle-small"></v-icon>
+              Promotions</v-list-item-title
+            >
+          </v-list-item>
+        </v-list-group>
+
+        <v-list-item @click="navigate('/service-promotion/service')">
+          <v-list-item-title>
+            <v-icon icon="mdi-circle-small"></v-icon> Services &
+            Promotions</v-list-item-title
+          >
         </v-list-item>
+      </v-list-group>
+
+      <v-list-item @click="navigate('/coming-soon')">
+        <v-list-item-title class="main-title">
+          <v-icon icon="mdi-bullhorn"></v-icon> Announcement</v-list-item-title
+        >
+      </v-list-item>
+
+      <v-list-group value="Partnership">
+        <template v-slot:activator="{ props }">
+          <v-list-item v-bind="props">
+            <v-list-item-title class="main-title">
+              <v-icon icon="mdi-handshake"></v-icon
+              >Partnerships</v-list-item-title
+            >
+          </v-list-item>
+        </template>
+
+        <v-list-item @click="navigate('/partnership/principles')">
+          <v-list-item-title>
+            <v-icon icon="mdi-circle-small"></v-icon>
+            Principles</v-list-item-title
+          >
+        </v-list-item>
+        <v-list-item @click="navigate('/partnership/hospitals')">
+          <v-list-item-title>
+            <v-icon icon="mdi-circle-small"></v-icon>
+            Hospitals</v-list-item-title
+          >
+        </v-list-item>
+      </v-list-group>
+
+      <v-list-group value="news">
+        <template v-slot:activator="{ props }">
+          <v-list-item v-bind="props">
+            <v-list-item-title class="main-title">
+              <v-icon icon="mdi-calendar-star"></v-icon>News &
+              Events</v-list-item-title
+            >
+          </v-list-item>
+        </template>
+
+        <v-list-item @click="navigate('/news-events/csr-activities')">
+          <v-list-item-title>
+            <v-icon icon="mdi-circle-small"></v-icon>CSR
+            Activities</v-list-item-title
+          >
+        </v-list-item>
+        <v-list-item @click="navigate('/news-events/news')">
+          <v-list-item-title>
+            <v-icon icon="mdi-circle-small"></v-icon>
+            News & Events</v-list-item-title
+          >
+        </v-list-item>
+      </v-list-group>
+
+      <v-list-item @click="navigate('/career')">
+        <v-list-item-title class="main-title">
+          <v-icon icon="mdi-book-edit"></v-icon> Career</v-list-item-title
+        >
+      </v-list-item>
+
+      <v-list-item @click="navigate('/contact-us')">
+        <v-list-item-title class="main-title">
+          <v-icon icon="mdi-card-account-phone"></v-icon
+          >Contact</v-list-item-title
+        >
+      </v-list-item>
     </v-list>
   </v-navigation-drawer>
 
@@ -221,23 +261,35 @@
         <i class="fa-solid fa-house-chimney mb-1"></i>
         <div><router-link to="/">Home </router-link></div>
       </div>
-      <div class="menu" :class="{ active: currentRoute.slice(0, 9) == '/about-us' }">
+      <div
+        class="menu"
+        :class="{ active: currentRoute.slice(0, 9) == '/about-us' }"
+      >
         <div><router-link to="#">About Us</router-link></div>
         <i class="fa-solid fa-sort-down"></i>
         <div class="dropdown">
           <router-link to="/about-us/introduction">Introduction</router-link>
           <router-link to="/about-us/ceo-message">CEO Message</router-link>
-          <router-link to="/about-us/vision-mission">Vision & Mission</router-link>
-          <router-link to="/about-us/company-milestone">Company Milestones</router-link>
+          <router-link to="/about-us/vision-mission"
+            >Vision & Mission</router-link
+          >
+          <router-link to="/about-us/company-milestone"
+            >Company Milestones</router-link
+          >
           <router-link to="/coming-soon">Distribution Network</router-link>
-          <router-link to="/coming-soon">Company Strength</router-link>
+          <router-link to="/coming-soon">Marketing Strength</router-link>
         </div>
       </div>
-      <div class="menu" :class="{ active: currentRoute.slice(0, 9) == '/business' }">
+      <div
+        class="menu"
+        :class="{ active: currentRoute.slice(0, 9) == '/business' }"
+      >
         <div><router-link to="#">Business</router-link></div>
         <i class="fa-solid fa-sort-down"></i>
         <div class="dropdown">
-          <router-link to="/business/lifeline">Lifeline Company Limited</router-link>
+          <router-link to="/business/lifeline"
+            >Lifeline Company Limited</router-link
+          >
           <router-link to="/business/mbd"
             >Myanmar Booster Distribution Company Limited</router-link
           >
@@ -248,7 +300,9 @@
               <router-link to="/business/loyal-lifeline"
                 >Loyal Lifeline Company Limited</router-link
               >
-              <router-link to="/business/lifecare">Lifecare Medical Services</router-link>
+              <router-link to="/business/lifecare"
+                >Lifecare Medical Services</router-link
+              >
             </div>
           </router-link>
         </div>
@@ -268,14 +322,24 @@
             >Products <i class="fa-solid fa-plus"></i
             ><i class="fa-solid fa-minus text-secondary"></i>
             <div class="subMenu text-center">
-              <router-link to="/product-service/catalog">Product Catalogue</router-link>
+              <router-link to="/product-service/catalog"
+                >Product Catalogue</router-link
+              >
               <router-link to="/coming-soon">Promotions</router-link>
             </div>
           </router-link>
-          <router-link to="/service-promotion/service">Services & Promotions</router-link>
+          <router-link to="/service-promotion/service"
+            >Services & Promotions</router-link
+          >
         </div>
       </div>
-      <div class="menu" :class="{ active: currentRoute.slice(0, 12) == '/partnership' }">
+      <div class="menu pointer" @click="navigate('/coming-soon')">
+        <div><router-link to="/comming">Announcement</router-link></div>
+      </div>
+      <div
+        class="menu"
+        :class="{ active: currentRoute.slice(0, 12) == '/partnership' }"
+      >
         <div><router-link to="#">Partnerships</router-link></div>
         <i class="fa-solid fa-sort-down"></i>
         <div class="dropdown">
@@ -283,21 +347,33 @@
           <router-link to="/partnership/hospitals">Hospitals</router-link>
         </div>
       </div>
-      <div class="menu" :class="{ active: currentRoute.slice(0, 5) == '/news' }">
+      <div
+        class="menu"
+        :class="{ active: currentRoute.slice(0, 5) == '/news' }"
+      >
         <div><router-link to="#">News & Events</router-link></div>
         <i class="fa-solid fa-sort-down"></i>
         <div class="dropdown">
-          <router-link to="/news-events/csr-activities">CSR Activities</router-link>
-          <router-link to="/coming-soon">Events</router-link>
-          <router-link to="/news-events/news">News</router-link>
+          <router-link to="/news-events/csr-activities"
+            >CSR Activities</router-link
+          >
+          <router-link to="/news-events/news">News & Events</router-link>
         </div>
       </div>
-      <div class="menu pointer" @click="navigate('/coming-soon')">
+      <div
+        class="menu pointer"
+        @click="navigate('/career')"
+        :class="{ active: currentRoute == '/career' }"
+      >
         <div>&nbsp;</div>
-        <div><router-link to="/coming-soon">Career</router-link></div>
+        <div><router-link to="/career">Career</router-link></div>
         <i class="fa-solid fa-sort-down" style="visibility: hidden"></i>
       </div>
-      <div class="menu pointer" @click="navigate('/coming-soon')">
+      <div
+        class="menu pointer"
+        @click="navigate('/contact-us')"
+        :class="{ active: currentRoute == '/contact-us' }"
+      >
         <div><router-link to="/contact-us">Contact</router-link></div>
       </div>
     </div>
@@ -565,6 +641,19 @@ export default {
   color: var(--sec-color) !important;
 }
 
+/* menu responsive */
+@media (max-width: 1796px) {
+  .nav2 .menu-items {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 1680px) {
+  .nav2 {
+    padding: 23px 13.5%;
+  }
+}
+
 @media (max-width: 1600px) {
   .nav1 {
     padding: 10px 9%;
@@ -664,10 +753,10 @@ export default {
     color: #000;
   }
   .menu .dropdown a {
-    width: 230px;
+    width: 290px;
   }
   .menu:hover .dropdown a {
-    height: 32px;
+    height: 38px;
     padding: 15px 10px 15px 10px;
     visibility: visible;
     transition: all 0.3s ease-in-out;
@@ -688,8 +777,19 @@ export default {
   }
 
   .menu:hover .dropdown a:hover .subMenu a {
-    height: 32px;
+    height: 38px;
     padding: 15px 0px 15px 25px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .nav2 {
+    padding: 15px 8%;
+  }
+  .nav2 .menu {
+    gap: 0px;
+    position: relative;
+    padding: 6px 8px;
   }
 }
 
@@ -747,16 +847,41 @@ export default {
   }
 }
 
+/* for menu bar responsive */
+@media (max-width: 1018px) {
+  .nav2 {
+    padding: 15px 1%;
+  }
+}
+
+@media (max-width: 980px) {
+  .nav2 .menu {
+    gap: 1px;
+    padding: 6px 8px;
+  }
+
+  .nav2 .menu div a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 943px) {
+  .nav2 .menu div a {
+    font-size: 11px;
+  }
+}
+
 @media (max-width: 920px) {
   .nav1 {
     padding: 10px 1%;
     gap: 10px;
     height: 85px;
   }
+}
 
+@media (max-width: 841px) {
   .nav2 {
-    padding: 15px 1%;
-    height: 35px !important;
+    padding: 15px 0%;
   }
 }
 
@@ -803,7 +928,7 @@ export default {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 825px) {
   .nav1 {
     background: linear-gradient(to left, #eeb876, #c3d2da) !important;
     position: sticky;
@@ -841,7 +966,7 @@ export default {
   }
 }
 
-@media(max-width: 425px) {
+@media (max-width: 425px) {
   .nav1 {
     height: 55px;
   }

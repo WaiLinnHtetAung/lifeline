@@ -2,21 +2,22 @@
   <div class="home">
     <Carousel></Carousel>
     <Welcome></Welcome>
-    <OurBusiness></OurBusiness>
+    <Activity></Activity>
   </div>
 </template>
 
 <script>
-import Welcome from '../components/Welcome'
-import OurBusiness from '../components/OurBusiness'
-import Carousel from '../components/Carousel'
+import Activity from "../components/Activity";
+import Welcome from "../components/Welcome";
+import Carousel from "../components/Carousel";
 // @ is an alias to /src
 
 export default {
   components: {
+    Activity,
     Welcome,
-    OurBusiness, Carousel },
-  name: 'HomeView',
-
-}
+    Carousel,
+  },
+  name: "HomeView",
+};
 </script>

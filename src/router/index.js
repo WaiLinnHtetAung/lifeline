@@ -26,10 +26,10 @@ const routes = [
     props: true,
   },
   {
-    path: "/products/:slug",
+    path: "/products",
     name: "Products",
     component: () => import("@/views/Products.vue"),
-    props: true,
+    // props: true,
   },
   {
     path: "/service-promotion/:slug",

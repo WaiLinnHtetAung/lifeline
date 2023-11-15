@@ -8,9 +8,7 @@
             :class="{ active: slug == 'catalog' }"
             >Products Catalog</router-link
           >
-          <router-link
-            to="/products/all"
-            :class="{ active: slug == 'ceo-message' }"
+          <router-link to="/products" :class="{ active: slug == 'ceo-message' }"
             >Products</router-link
           >
           <router-link

@@ -268,7 +268,9 @@
         <div><router-link to="#">About Us</router-link></div>
         <i class="fa-solid fa-sort-down"></i>
         <div class="dropdown">
-          <router-link to="/about-us/introduction">Introduction</router-link>
+          <router-link to="/about-us/introduction" class="intro"
+            >Introduction</router-link
+          >
           <router-link to="/about-us/ceo-message">CEO Message</router-link>
           <router-link to="/about-us/vision-mission"
             >Vision & Mission</router-link

@@ -11,21 +11,27 @@
             :class="{ active: slug == 'catalog' }"
             >Products Catalog</router-link
           >
-          <router-link to="/products/all" :class="{ active: slug == 'all' }"
-            >All Products</router-link
-          >
           <router-link
-            :to="'/products/' + category.name"
-            :class="{ active: slug == category.name }"
+            to="#"
+            :class="{ active: slug == 'all' }"
+            @click="handleCategory('all')"
+            >All Products
+          </router-link>
+          <a
             v-for="(category, i) in categories"
             :key="i"
-            >{{ category.name }}</router-link
+            :class="{ active: slug == category.name }"
+            @click="handleCategory(category.name)"
+            class="pointer"
+            >{{ category.name }}</a
           >
         </div>
       </div>
       <div class="col-lg-9 col-md-12 col-sm-12">
         <div class="header">
-          <div class="slug">{{ slug.toUpperCase() }}</div>
+          <div class="slug">
+            {{ slug.toUpperCase() }}
+          </div>
 
           <select
             name=""
@@ -85,47 +91,46 @@ import { onMounted, onUpdated, ref, watch } from "vue";
 import { useStore } from "vuex";
 import { useRouter } from "vue-router";
 export default {
-  props: ["slug"],
-
-  setup(props) {
+  setup() {
     const store = useStore();
     const router = useRouter();
-    const categories = ref([]);
-    const products = ref([]);
+    const categories = ref("");
     const filteredProducts = ref([]);
+    const allProducts = ref([]);
     const currentRoute = ref("");
+    const slug = ref("all");
 
     router.afterEach((to) => {
       currentRoute.value = to.path;
     });
 
     const categorySelect = (event) => {
-      router.push(`${event.target.value}`);
+      handleCategory(event.target.value);
+    };
+
+    const handleCategory = (name) => {
+      if (name == "all") {
+        filteredProducts.value = allProducts.value;
+      } else {
+        let data = allProducts.value.filter((item) => item.category == name);
+        filteredProducts.value = data;
+      }
     };
 
     onMounted(() => {
       window.scrollTo(0, 0);
       categories.value = store.getters.getCategories;
-      products.value = store.getters.getProducts;
-      filteredProducts.value = products.value;
-    });
-
-    onUpdated(() => {
-      if (props.slug == "all") {
-        filteredProducts.value = store.getters.getProducts;
-      } else {
-        filteredProducts.value = products.value.filter(
-          (product) => product.category == props.slug
-        );
-      }
+      allProducts.value = store.getters.getProducts;
+      filteredProducts.value = allProducts.value;
     });
 
     return {
       categories,
-      products,
       currentRoute,
       filteredProducts,
       categorySelect,
+      handleCategory,
+      slug,
     };
   },
 };

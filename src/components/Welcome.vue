@@ -7,7 +7,7 @@
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, incidunt
       at dignissimos sed ipsam nisi Lorem ipsum dolor sit amet consectetur
       adipisicidng elit. Eaque repedfllendus illum molestias dolore quae ea
-      atque optio dolorum facere? Sapiente, explicabo. Necessitatibus,
+      atque optio doslorum facere? Sapiente, explicabo. Necessitatibus,
       repellendus totam cum harum magni quia vero odit. quaerat quis asperiores
       magni reprehenderit!
     </p>

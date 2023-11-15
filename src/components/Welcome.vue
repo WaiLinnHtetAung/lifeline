@@ -2,12 +2,12 @@
   <div class="welcome">
     <h2>Welcome To Lifeline Group of Companies</h2>
     <p>
-      Lorem ispsum dolor sit amet, consectetur adipisicing elit. Tenetur maxime
-      esse sunt excepturi odio soluta asperiores vel fuga! Assumenda, eius!
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, incidunt
-      at dignissimos sed ipsam nisi Lorem ipsum dolor sit amet consectetur
-      adipisicidng elit. Eaque repedfllendus illum molestias dolore quae ea
-      atque optio doslorum facere? Sapiente, explicabo. Necessitatibus,
+      Lorem update ispsum dolor sit amet, consectetur adipisicing elit. Tenetur
+      maxime esse sunt excepturi odio soluta asperiores vel fuga! Assumenda,
+      eius! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum,
+      incidunt at dignissimos sed ipsam nisi Lorem ipsum dolor sit amet
+      consectetur adipisicidng elit. Eaque repedfllendus illum molestias dolore
+      quae ea atque optio doslorum facere? Sapiente, explicabo. Necessitatibus,
       repellendus totam cum harum magni quia vero odit. quaerat quis asperiores
       magni reprehenderit!
     </p>

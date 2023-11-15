@@ -13,7 +13,7 @@
     </p>
     <p>
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas id modi
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum quia
+      Lorem, ipsum dolor sit amet consectetsur adipisicing elit. Laborum quia
       reprehenderit beatae sit omnis similique sequi nulla veritatis quaerat
       eius. alias exercitationem? Officia consequatur quam perferendis nam,
       animi sapiente!

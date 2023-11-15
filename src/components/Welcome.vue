@@ -6,7 +6,7 @@
       esse sunt excepturi odio soluta asperiores vel fuga! Assumenda, eius!
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, incidunt
       at dignissimos sed ipsam nisi Lorem ipsum dolor sit amet consectetur
-      adipisicing elit. Eaque repellendus illum molestias dolore quae ea atque
+      adipisicidng elit. Eaque repellendus illum molestias dolore quae ea atque
       optio dolorum facere? Sapiente, explicabo. Necessitatibus, repellendus
       totam cum harum magni quia vero odit. quaerat quis asperiores magni
       reprehenderit!

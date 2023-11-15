@@ -2,7 +2,7 @@
   <div class="welcome">
     <h2>Welcome To Lifeline Group of Companies</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur maxime
+      Lorem ispsum dolor sit amet, consectetur adipisicing elit. Tenetur maxime
       esse sunt excepturi odio soluta asperiores vel fuga! Assumenda, eius!
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, incidunt
       at dignissimos sed ipsam nisi Lorem ipsum dolor sit amet consectetur

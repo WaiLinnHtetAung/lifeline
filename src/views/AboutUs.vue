@@ -2,7 +2,7 @@
   <div class="about-us">
     <div class="row">
       <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-        <div class="menu w-100">
+        <div class="menu w-100" data-aos="flip-right">
           <router-link
             to="/about-us/introduction"
             :class="{ active: slug == 'introduction' }"
@@ -23,20 +23,28 @@
             :class="{ active: slug == 'company-milestone' }"
             >Company Milestones</router-link
           >
-          <router-link to="#">Distribution Network</router-link>
-          <router-link to="#">Regulatory Strength</router-link>
+          <router-link
+            to="/about-us/distribution-network"
+            :class="{ active: slug == 'distribution-network' }"
+            >Distribution Network</router-link
+          >
+          <router-link
+            to="/about-us/marketing-strength"
+            :class="{ active: slug == 'marketing-strength' }"
+            >Marketing Strength</router-link
+          >
         </div>
       </div>
       <div class="col-lg-9 col-md-9 col-sm-12">
         <div class="content">
           <div v-if="slug == 'introduction'"><Introduction></Introduction></div>
           <div v-if="slug == 'ceo-message'"><CeoMessage></CeoMessage></div>
-          <div v-if="slug == 'vision-mission'">
-            <VisionMission></VisionMission>
+          <div v-if="slug == 'vision-mission'"><VisionMission /></div>
+          <div v-if="slug == 'company-milestone'"><CompanyMilestone /></div>
+          <div v-if="slug == 'distribution-network'">
+            <DistributionNetwork />
           </div>
-          <div v-if="slug == 'company-milestone'">
-            <CompanyMilestone></CompanyMilestone>
-          </div>
+          <div v-if="slug == 'marketing-strength'"><MarketingStrength /></div>
         </div>
       </div>
     </div>
@@ -44,6 +52,8 @@
 </template>
 
 <script>
+import MarketingStrength from "../components/about-us/MarketingStrength";
+import DistributionNetwork from "../components/about-us/DistributionNetwork";
 import CompanyMilestone from "../components/about-us/CompanyMilestone";
 import VisionMission from "../components/about-us/VisionMission";
 import CeoMessage from "../components/about-us/CeoMessage";
@@ -51,6 +61,8 @@ import { onMounted } from "vue";
 import Introduction from "../components/about-us/Introduction";
 export default {
   components: {
+    MarketingStrength,
+    DistributionNetwork,
     CompanyMilestone,
     VisionMission,
     CeoMessage,

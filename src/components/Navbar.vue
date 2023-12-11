@@ -278,8 +278,12 @@
           <router-link to="/about-us/company-milestone"
             >Company Milestones</router-link
           >
-          <router-link to="/coming-soon">Distribution Network</router-link>
-          <router-link to="/coming-soon">Marketing Strength</router-link>
+          <router-link to="/about-us/distribution-network"
+            >Distribution Network</router-link
+          >
+          <router-link to="/about-us/marketing-strength"
+            >Marketing Strength</router-link
+          >
         </div>
       </div>
       <div

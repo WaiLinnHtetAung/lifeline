@@ -1,22 +1,27 @@
 <template>
   <div class="welcome">
-    <h2>Welcome To Lifeline Group of Companies</h2>
-    <p>
-      Lorem update ispsum dolor sit amet, consectetur adipisicing elit. Tenetur
-      maxime esse sunt excepturi odio soluta asperiores vel fuga! Assumenda,
-      eius! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum,
-      incidunt at dignissimos sed ipsam nisi Lorem ipsum dolor sit amet
-      consectetur adipisicidng elit. Eaque repedfllendus illum molestias dolore
-      quae ea atque optio doslorum facere? Sapiente, explicabo. Necessitatibus,
-      repellendus totam cum harum magni quia vero odit. quaerat quis asperiores
-      magni reprehenderit!
+    <h2 data-aos="fade-right">Welcome To Lifeline Group of Companies</h2>
+    <p data-aos="flip-up">
+      Lifeline Group of Companies is a group of healthcare companies mainly
+      focusing on pharmaceutical products, healthcare products and healthcare
+      services. We are located in Myanmar with our headquarter in Yangon and
+      many branch offices in different state and divisions of Myanmar.
     </p>
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas id modi
-      Lorem, ipsum dolor sit amet consectetsur adipisicing elit. Laborum quia
-      reprehenderit beatae sit omnis similique sequi nulla veritatis quaerat
-      eius. alias exercitationem? Officia consequatur quam perferendis nam,
-      animi sapiente!
+    <p data-aos="flip-up">
+      Founded since 2003, we have over 20 years of experience and expertise in
+      marketing and distribution of healthcare products and services accessible
+      to the majority of population in Myanmar.
+    </p>
+    <p data-aos="flip-up">
+      Our products are of high quality with reasonable price and our services
+      being prompt, Lifeline Group of Companies is working constantly to be one
+      of the best healthcare providers in Myanmar.
+    </p>
+    <p data-aos="flip-up">
+      Our company is dedicated to delivering diverse products with top-notch
+      quality through unwavering commitment and hard work, ensuring exceptional
+      quality for our customers. Our medical services are also delivered with a
+      warm heart, ensuring both prompt and accurate care.
     </p>
     <br />
     <router-link to="#">Read More</router-link>

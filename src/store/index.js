@@ -2,6 +2,7 @@ import { createStore } from "vuex";
 
 export default createStore({
   state: {
+    locale: "EN",
     categories: [
       {
         id: 1,
@@ -201,8 +202,17 @@ export default createStore({
     getProducts(state) {
       return state.products;
     },
+    getLocale(state) {
+      return state.locale;
+    },
   },
-  mutations: {},
-  actions: {},
+  mutations: {
+    setLocale: (state, value) => (state.locale = value),
+  },
+  actions: {
+    getLocale: (context, value) => {
+      context.commit("setLocale", value);
+    },
+  },
   modules: {},
 });

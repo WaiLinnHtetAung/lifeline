@@ -259,13 +259,17 @@
         @click="navigate('/')"
       >
         <i class="fa-solid fa-house-chimney mb-1"></i>
-        <div><router-link to="/">Home </router-link></div>
+        <div>
+          <router-link to="/">{{ $t("home") }}</router-link>
+        </div>
       </div>
       <div
         class="menu"
         :class="{ active: currentRoute.slice(0, 9) == '/about-us' }"
       >
-        <div><router-link to="#">About Us</router-link></div>
+        <div>
+          <router-link to="#">{{ $t("about-us") }}</router-link>
+        </div>
         <i class="fa-solid fa-sort-down"></i>
         <div class="dropdown">
           <router-link to="/about-us/introduction" class="intro"
@@ -290,7 +294,9 @@
         class="menu"
         :class="{ active: currentRoute.slice(0, 9) == '/business' }"
       >
-        <div><router-link to="#">Business</router-link></div>
+        <div>
+          <router-link to="#">{{ $t("business") }}</router-link>
+        </div>
         <i class="fa-solid fa-sort-down"></i>
         <div class="dropdown">
           <router-link to="/business/lifeline"
@@ -321,7 +327,9 @@
             currentRoute.slice(0, 8) == '/service',
         }"
       >
-        <div><router-link to="#">Our Products & Services</router-link></div>
+        <div>
+          <router-link to="#">{{ $t("product-service") }}</router-link>
+        </div>
         <i class="fa-solid fa-sort-down"></i>
         <div class="dropdown">
           <router-link to="#"
@@ -340,13 +348,17 @@
         </div>
       </div>
       <div class="menu pointer" @click="navigate('/coming-soon')">
-        <div><router-link to="/comming">Announcement</router-link></div>
+        <div>
+          <router-link to="/coming-soon">{{ $t("announcement") }}</router-link>
+        </div>
       </div>
       <div
         class="menu"
         :class="{ active: currentRoute.slice(0, 12) == '/partnership' }"
       >
-        <div><router-link to="#">Partnerships</router-link></div>
+        <div>
+          <router-link to="#">{{ $t("partnerships") }}</router-link>
+        </div>
         <i class="fa-solid fa-sort-down"></i>
         <div class="dropdown">
           <router-link to="/partnership/principles">Principles</router-link>
@@ -357,7 +369,9 @@
         class="menu"
         :class="{ active: currentRoute.slice(0, 5) == '/news' }"
       >
-        <div><router-link to="#">News & Events</router-link></div>
+        <div>
+          <router-link to="#">{{ $t("news-event") }}</router-link>
+        </div>
         <i class="fa-solid fa-sort-down"></i>
         <div class="dropdown">
           <router-link to="/news-events/csr-activities"
@@ -372,7 +386,9 @@
         :class="{ active: currentRoute == '/career' }"
       >
         <div>&nbsp;</div>
-        <div><router-link to="/career">Career</router-link></div>
+        <div>
+          <router-link to="/career">{{ $t("career") }}</router-link>
+        </div>
         <i class="fa-solid fa-sort-down" style="visibility: hidden"></i>
       </div>
       <div
@@ -380,7 +396,9 @@
         @click="navigate('/contact-us')"
         :class="{ active: currentRoute == '/contact-us' }"
       >
-        <div><router-link to="/contact-us">Contact</router-link></div>
+        <div>
+          <router-link to="/contact-us">{{ $t("contact") }}</router-link>
+        </div>
       </div>
     </div>
 
@@ -393,10 +411,10 @@
       </template>
 
       <v-list>
-        <v-list-item class="lang-list" @click="language = 'ENG'">
+        <v-list-item class="lang-list" @click="changeLanguage('EN')">
           <v-list-item-title>ENG</v-list-item-title>
         </v-list-item>
-        <v-list-item class="lang-list" @click="language = 'MM'">
+        <v-list-item class="lang-list" @click="changeLanguage('MM')">
           <v-list-item-title>MM</v-list-item-title>
         </v-list-item>
       </v-list>
@@ -407,23 +425,30 @@
 <script>
 import { ref, computed } from "vue";
 import { useRouter } from "vue-router";
+import { useStore } from "vuex";
 
 export default {
   setup() {
     const drawer = ref(false);
     const router = useRouter();
-    const language = ref("ENG");
+    const language = ref("EN");
     const currentRoute = ref("");
+    const store = useStore();
     const navigate = (route) => {
       router.push(route);
       drawer.value = false; // Close the drawer after navigation (for mobile)
+    };
+
+    let changeLanguage = (lang) => {
+      language.value = lang;
+      store.dispatch("getLocale", lang);
     };
 
     router.afterEach((to) => {
       currentRoute.value = to.path;
     });
 
-    return { navigate, drawer, language, currentRoute };
+    return { navigate, drawer, language, currentRoute, changeLanguage };
   },
 };
 </script>

@@ -1,4 +1,7 @@
-import { createApp } from "vue";
+import { createApp, onMounted, watch } from "vue";
+import { createI18n } from "vue-i18n";
+import EN from "./locale/en.json";
+import MM from "./locale/mm.json";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
@@ -25,4 +28,20 @@ AOS.init({
   mirror: true,
 });
 
-createApp(App).use(store).use(vuetify).use(router).mount("#app");
+// Add a watcher for the 'locale' value in the Vuex store
+store.watch(
+  (state) => state.locale,
+  (newLocale) => {
+    i18n.global.locale = newLocale;
+  }
+);
+
+const i18n = createI18n({
+  locale: store.state.locale,
+  messages: {
+    EN: EN,
+    MM: MM,
+  },
+});
+
+createApp(App).use(store).use(vuetify).use(i18n).use(router).mount("#app");

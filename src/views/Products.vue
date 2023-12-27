@@ -3,6 +3,9 @@
     <img src="@/assets/images/products-banner.jpg" alt="" />
   </div>
   <div class="products">
+    <div v-if="isLoading">
+      <Loading />
+    </div>
     <div class="row">
       <div class="col-lg-3 col-md-12 col-sm-12 pe-0">
         <div class="menu w-100">
@@ -62,12 +65,12 @@
               :key="i"
             >
               <div class="product-card">
-                <img :src="product.img" alt="" />
+                <img :src="product.image" alt="" />
                 <div class="divider"></div>
                 <div class="ingredient">
                   <span
                     class="rounded-pill"
-                    v-for="(ingre, i) in product.ingredient"
+                    v-for="(ingre, i) in product.ingredients"
                     :key="i"
                     >{{ ingre }}</span
                   >
@@ -87,22 +90,37 @@
 </template>
 
 <script>
+import Loading from "../components/Loading";
 import { onMounted, onUpdated, ref, watch } from "vue";
 import { useStore } from "vuex";
 import { useRouter } from "vue-router";
+import getProducts from "@/composables/getProducts";
+import getCategory from "@/composables/getCategory";
+
 export default {
+  components: { Loading },
   setup() {
     const store = useStore();
     const router = useRouter();
-    const categories = ref("");
     const filteredProducts = ref([]);
     const allProducts = ref([]);
     const currentRoute = ref("");
     const slug = ref("all");
+    let isLoading = ref(true);
 
     router.afterEach((to) => {
       currentRoute.value = to.path;
     });
+
+    //get products from api
+    let { products, error, load } = getProducts();
+
+    //get category from api
+    let {
+      categories,
+      error: CategoryError,
+      load: CategoryLoad,
+    } = getCategory(); //return {categories, error, load}
 
     const categorySelect = (event) => {
       handleCategory(event.target.value);
@@ -111,17 +129,28 @@ export default {
     const handleCategory = (name) => {
       if (name == "all") {
         filteredProducts.value = allProducts.value;
+        window.scrollTo(0, 50);
+        slug.value = "all";
       } else {
         let data = allProducts.value.filter((item) => item.category == name);
         filteredProducts.value = data;
+        window.scrollTo(0, 50);
+        slug.value = name;
       }
     };
 
-    onMounted(() => {
+    onMounted(async () => {
       window.scrollTo(0, 0);
-      categories.value = store.getters.getCategories;
-      allProducts.value = store.getters.getProducts;
-      filteredProducts.value = allProducts.value;
+
+      await load();
+      await CategoryLoad();
+      if (!error.value) {
+        isLoading.value = false;
+        allProducts.value = products.value;
+        filteredProducts.value = products.value;
+      } else {
+        console.error("Error ", error.value);
+      }
     });
 
     return {
@@ -131,6 +160,8 @@ export default {
       categorySelect,
       handleCategory,
       slug,
+      products,
+      isLoading,
     };
   },
 };
@@ -225,6 +256,7 @@ export default {
   width: 100%;
   height: 200px;
   object-fit: contain;
+  margin: 20px auto;
 }
 
 .product-card .divider {
@@ -249,7 +281,7 @@ export default {
 }
 
 .product-card h2 {
-  margin: 20px auto;
+  margin: 10px auto 0px;
   font-weight: bold;
   font-size: 24px;
   text-align: center;

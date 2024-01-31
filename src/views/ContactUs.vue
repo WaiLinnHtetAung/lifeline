@@ -44,46 +44,39 @@
             placeholder="Feel free to write us"
           ></textarea>
         </div>
-        <button class="btn btn-success w-100">Submit</button>
+        <button class="btn">Submit</button>
       </div>
-      <div class="map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d794.96138933151!2d96.13091972674002!3d16.837824966492192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1950017207cd5%3A0xe9fa12534c33c00c!2sLifeline%20Group%20of%20Companies!5e0!3m2!1sen!2smm!4v1688320014597!5m2!1sen!2smm"
-          width="100%"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-    </div>
-  </div>
+      <div class="address">
+        <h3>Meet Us</h3>
+        <div class="address-card">
+          <div class="address-icon">
+            <i class="fa-solid fa-location-dot mt-5"></i>
+          </div>
 
-  <div class="address">
-    <div class="address-card shadow">
-      <div class="address-icon">
-        <i class="fa-solid fa-location-dot mt-5"></i>
-      </div>
-      <h3>Lifeline</h3>
-      <p class="text-center">
-        No.13, HlaingMyintHmo 7 th St, Hlaing Township, Yangon
-      </p>
-    </div>
+          <p class="location">
+            No.13, HlaingMyintHmo 7 th St, Hlaing Township, Yangon
+          </p>
+        </div>
+        <div class="address-card">
+          <div class="address-icon">
+            <i class="fa-solid fa-square-phone"></i>
+          </div>
+          <p>
+            +959 - 2343423442<br />
+            +959 - 4432325902
+          </p>
 
-    <div class="address-card shadow">
-      <div class="address-icon">
-        <i class="fa-solid fa-square-phone"></i>
+          <p></p>
+        </div>
+        <div class="address-card">
+          <div class="address-icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <p class="text-center">inquiry@lifelinemyanmar.com</p>
+          <p>&nbsp;</p>
+        </div>
+        <div class="map"></div>
       </div>
-      <p class="text-center">+959 - 2343423442</p>
-      <p class="text-center">+959 - 4432325902</p>
-    </div>
-
-    <div class="address-card shadow">
-      <div class="address-icon">
-        <i class="fa-solid fa-envelope"></i>
-      </div>
-      <p class="text-center">inquiry@lifelinemyanmar.com</p>
-      <p>&nbsp;</p>
     </div>
   </div>
 </template>
@@ -137,13 +130,18 @@ export default {};
 
 .form-group {
   display: flex;
+  width: 420px;
+  padding: 0px 50px;
   flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 .form-group input {
   border: 1px solid rgb(223, 223, 223);
   padding: 10px 20px;
   border-radius: 7px;
+  gap: 10px;
 }
 
 .form-group input:focus {
@@ -162,46 +160,53 @@ export default {};
   height: 500px;
 }
 
+.btn {
+  display: flex;
+  width: 100px;
+  padding: 10px;
+  margin-left: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: #01ffff;
+  color: #fff;
+}
+
 .space {
   height: 400px;
   background: #f2f2f2;
 }
 
 .address {
-  padding: 30px 15.5%;
-  background: #f2f2f2;
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding-bottom: 90px;
-}
-.address-card {
-  background: #fff;
-  width: 25%;
-  padding: 20px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
+  width: 650px;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
 }
 
-.address-card .address-icon {
-  height: 80px;
+.address-card {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+}
+.address-card p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+.address-card .location {
+  margin-top: 35px;
 }
 
 .address-card i {
   font-size: 35px;
   color: var(--sec-color);
-  margin: 10px auto 20px;
 }
 
 .address-card h3 {
   font-weight: bold;
-}
-
-.address-card p {
-  margin-bottom: 10px;
 }
 
 @media (max-width: 1600px) {
@@ -272,8 +277,8 @@ export default {};
   }
 
   .address {
-    padding: 30px 9%;
-    gap: 30px;
+    padding: 0px 9%;
+    gap: 10px;
   }
 
   .address-card h3 {
@@ -283,8 +288,8 @@ export default {};
 
 @media (max-width: 1400px) {
   .address {
-    padding: 30px 6%;
-    gap: 30px;
+    padding: 0px 6%;
+    gap: 20px;
   }
 }
 
@@ -293,8 +298,11 @@ export default {};
     width: 990px;
   }
   .address {
-    padding: 30px 0%;
-    gap: 60px;
+    display: flex;
+    width: 600px;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
   }
 }
 
@@ -304,12 +312,15 @@ export default {};
   }
 
   .address {
-    gap: 20px;
+    display: flex;
+    width: 350px;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
   }
 
   .address-card {
-    width: 28%;
-    padding: 20px 40px;
+    text-align: left;
   }
 
   .address-card i {

@@ -69,9 +69,9 @@
                     <router-link to="/coming-soon">Career</router-link>
                 </div>
             </div>
-            <div class="col-lg-5">
+            <!-- <div class="col-lg-5">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d794.96138933151!2d96.13091972674002!3d16.837824966492192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1950017207cd5%3A0xe9fa12534c33c00c!2sLifeline%20Group%20of%20Companies!5e0!3m2!1sen!2smm!4v1688320014597!5m2!1sen!2smm" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            </div> -->
         </div>
 
         <div class="f-divider"></div>
@@ -91,8 +91,8 @@
 <style scoped>
     .footer {
         padding: 30px 15% 10px;
-        background: #a39d9d;
-        background-image: linear-gradient(45deg,#1a182e 25%,rgba(239,239,239,0) 25%,rgba(239,239,239,0) 75%,#1a182e 75%,#1a182e);
+        background: #01579b;
+       
     }
 
     .footer .logo h2 {

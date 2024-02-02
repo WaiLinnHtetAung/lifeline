@@ -140,6 +140,7 @@ export default {};
 }
 
 .form-group input {
+  width: 320px;
   border: 1px solid rgb(223, 223, 223);
   padding: 10px 20px;
   border-radius: 7px;
@@ -180,11 +181,13 @@ export default {};
   flex-wrap: wrap;
 }
 
+
 .address-card {
   display: flex;
   text-align: center;
   align-items: center;
   gap: 10px;
+
 }
 .address-card p {
   margin-top: 15px;
@@ -202,6 +205,20 @@ export default {};
 .address-card h3 {
   font-weight: bold;
 }
+
+/* @media (max-width: 1920px){
+  .address {
+  display: flex;
+  width: 500px;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  margin: 30px auto;
+}
+.address-card p {
+  font-size: 20px;
+}
+} */
 
 @media (max-width: 1600px) {
   .contact-us {
@@ -248,6 +265,7 @@ export default {};
     padding: 8px 20px;
     border-radius: 7px;
   }
+
 
   .form-group input:focus {
     outline: none;

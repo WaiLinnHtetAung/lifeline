@@ -75,7 +75,9 @@
           <p class="text-center">inquiry@lifelinemyanmar.com</p>
           <p>&nbsp;</p>
         </div>
-        <div class="map"></div>
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4541.305702421418!2d96.12803311662866!3d16.837877205906576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1950017207cd5%3A0xe9fa12534c33c00c!2sLifeline%20Group%20of%20Companies!5e0!3m2!1sen!2smm!4v1706848378391!5m2!1sen!2smm" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
       </div>
     </div>
   </div>
@@ -151,14 +153,6 @@ export default {};
 .form .form-data {
   width: 600px;
 }
-.form .map {
-  width: 600px;
-  padding: 25px;
-}
-
-.form .map iframe {
-  height: 500px;
-}
 
 .btn {
   display: flex;
@@ -201,7 +195,7 @@ export default {};
 }
 
 .address-card i {
-  font-size: 35px;
+  font-size: 25px;
   color: var(--sec-color);
 }
 
@@ -262,14 +256,14 @@ export default {};
   .form .form-data {
     width: 600px;
   }
-  .form .map {
+ /* .map {
     width: 600px;
-    padding: 25px;
-  }
-
-  .form .map iframe {
     height: 500px;
-  }
+  } */
+
+  /* .form .map iframe {
+    height: 500px;
+  } */
 
   .space {
     height: 400px;
@@ -304,11 +298,20 @@ export default {};
     align-content: flex-start;
     flex-wrap: wrap;
   }
+
+iframe{
+   width: 400px;
+   height: 300px;
+  }
 }
 
 @media (max-width: 1080px) {
   .form {
     width: 800px;
+  }
+
+  iframe{
+    width: 250px;
   }
 
   .address {
@@ -338,6 +341,7 @@ export default {};
   }
 
   .address {
+    display: none;
     gap: 20px;
     flex-wrap: wrap;
   }
@@ -383,16 +387,11 @@ export default {};
   }
 }
 
-@media (max-width: 530px) {
-  .form {
-    width: 100%;
-  }
-}
-
 @media (max-width: 420px) {
   .address-card {
     width: 90%;
     padding: 10px 20px;
   }
+
 }
 </style>
